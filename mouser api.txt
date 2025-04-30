@@ -1,0 +1,8 @@
+API Setup Complete
+Your Mouser Search API access has been setup and your unique API Key has been assigned (see below). Please keep this key secure and use it only for the specific purpose specified in your request. To begin using the API, please refer to the getting started area on the right.
+Your API Key:
+Assigned To:
+For:
+f3bb46c8-8ab6-4419-ad6a-9b974eee0f59
+IME GENERAL
+Compare Stock And Price

@@ -1,0 +1,14 @@
+Api Key	: d5ed2017-9694-43a5-bcf7-285b6076af9e
+
+Url	: https://api.mouser.com/api/v1/search/keyword?apiKey=d5ed2017-9694-43a5-bcf7-285b6076af9e
+
+model
+{
+  "SearchByKeywordRequest": {
+    "keyword": "s760",
+    "records": 1000,
+    "startingRecord": 0,
+    "searchOptions": "string",
+    "searchWithYourSignUpLanguage": "string"
+  }
+}
