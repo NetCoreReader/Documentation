@@ -1,0 +1,21 @@
+Aşağıda belirtilen IP ve portlardan gelerek erişebilecekleri topicler TK_LEG_UPDATE_EVENTS ve AJ_LEG_UPDATE_EVENTS’dir.
+
+ 
+
+Public ip: 46.31.112.48, 46.31.112.188, 46.31.112.189
+
+Port: 9093
+
+Private IP: 192.168.234.51,192.168.234.52,192.168.234.53
+
+Port: 9092
+
+ 
+
+Topic ismi, user ve şifreyi konfigürasyona girerek bağlantı kurabilirler.
+
+ 
+
+username = TK_LEG_UPDATE_EVENTS   password = Mh9!jasdb41
+
+username = AJ_LEG_UPDATE_EVENTS   password = Mh9!jasdb41

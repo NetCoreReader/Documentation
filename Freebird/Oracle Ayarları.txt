@@ -1,0 +1,6 @@
+User		: romsis_integration_user
+Pass		: Welcome123
+Test Url	: https://iabxbn-dev2.fa.ocs.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesInvoices
+UAT Test Url	: https://iabxbn-test.fa.ocs.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesInvoices
+Prod Test Url	: https://iabxbn.fa.ocs.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesInvoices
+Docs Url	: https://docs.oracle.com/en/cloud/saas/financials/25b/farfa/op-cashbankaccounts-get.html

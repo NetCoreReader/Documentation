@@ -1,0 +1,28 @@
+Test Ortamı swagger
+https://testws.thydoco.com.tr/doco_orderservice/swagger/index.html
+
+Sipariş İletim
+Test
+https://testws.thydoco.com.tr/doco_orderservice/api/DocoOrderService
+canlı
+https://ws.thydoco.com.tr/DOCO_OrderService/swagger/index.html
+
+Satış Adeti İletim (Yeni Eklenen)
+Test
+https://testws.thydoco.com.tr/doco_orderservice/api/DocoOrderService/PostSale
+
+
+docowsuser
+SY1MQbHz-S
+
+
+
+
+
+https://testws.thydoco.com.tr/doco_orderservice/swagger/index.html
+
+ 
+
+
+
+

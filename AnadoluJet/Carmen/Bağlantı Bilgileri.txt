@@ -1,0 +1,178 @@
+[POST] wsdev.thy.com/cressflightinfows/v1/flight/info/list
+
+
+
+
+ 
+
+User name: POCROMSIS
+
+Password: Rm.20(24
+
+[{
+ "carrier":"TK",
+ "flightNo":"7979",
+ "departureDate":"04-Feb-2024",
+ "departureAirport":"ECN",
+ "arrivalAirport":"ESB"
+}]
+
+ 
+
+Response:
+[
+    {
+        "departureAirport": "ECN",
+        "carrier": "TK",
+        "flightNo": 7979,
+        "departureDate": "04-Feb-2024",
+        "departureTime": "18:30",
+        "arrivalAirport": "ESB",
+        "flightCrew": [
+            {
+                "crewId": "111111",
+                "name": "XXXXXXXXXX",
+                "surname": "XXXXXXXXXX",
+                "sequence": 1,
+                "seniority": 2439,
+                "crewType": "C",
+                "dutyOnFlight": "C",
+                "baseDuty": "P",
+                "classInfo": "P3",
+                "isCheckedIn": false,
+                "category": "CAT3A",
+                "isDeadhead": false,
+                "baseFleet": "777"
+            },
+            {
+                "crewId": "111111",
+                "name": "IBXXXXX XXRA",
+                "surname": "MAXXXIL",
+
+                "sequence": 2,
+
+                "seniority": 5308,
+
+                "dutyOnFlight": "P",
+
+                "baseDuty": "S",
+
+                "isCheckedIn": false,
+
+                "category": "CAT3A",
+
+                "isDeadhead": false,
+
+                "baseFleet": "Cabin"
+
+            },
+
+            {
+
+                "crewId": "111111",
+
+                "name": "XXXXXXXXXX",
+
+                "surname": "KAXX XXIS",
+
+                "sequence": 3,
+
+                "seniority": 2385,
+
+                "crewType": "S",
+
+                "dutyOnFlight": "A",
+
+                "baseDuty": "A",
+
+                "classInfo": "V",
+
+                "isCheckedIn": false,
+
+                "isDeadhead": false,
+
+                "baseFleet": "Cabin"
+
+            },
+
+            {
+
+                "crewId": "111111",
+
+                "name": "XXXXXXXXXX",
+
+                "surname": "YIXXXXIM",
+
+                "sequence": 4,
+
+                "seniority": 6555,
+
+                "crewType": "S",
+
+                "dutyOnFlight": "S",
+
+                "baseDuty": "S",
+
+                "classInfo": "Q",
+
+                "isCheckedIn": false,
+
+                "isDeadhead": false,
+
+                "baseFleet": "Cabin"
+
+            },
+
+            {
+
+                "crewId": "111111",
+
+                "name": "XXXXXXXXXX",
+
+                "surname": "NOXXLI",
+
+                "sequence": 5,
+
+                "seniority": 14403,
+
+                "crewType": "S",
+
+                "dutyOnFlight": "S",
+
+                "baseDuty": "A",
+
+                "classInfo": "F",
+
+                "isCheckedIn": false,
+
+                "isDeadhead": false,
+
+                "baseFleet": "Cabin"
+
+            },
+
+            {
+
+                "crewId": "111111",
+
+                "name": "XXXXXXXXXX",
+
+                "surname": "ATXXCA",
+
+                "sequence": 6,
+
+                "seniority": 777777,
+
+                "dutyOnFlight": "S",
+
+                "isCheckedIn": false,
+
+                "isDeadhead": false
+
+            }
+
+        ]
+
+    }
+
+]

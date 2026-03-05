@@ -1,0 +1,1 @@
+Data Source=192.168.1.251;Initial Catalog=LOGODB_Data; Integrated Security=False; Persist Security Info=False;  connection timeout=1024; User ID=sa;Password=Aa123456

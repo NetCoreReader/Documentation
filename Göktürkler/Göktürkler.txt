@@ -1,0 +1,39 @@
+Forticlient Baðlantý Bilgisi
+Kullanýcý adý 	: romsis
+Parola 		: R161636_@!
+IP 		: 78.182.254.244 
+Port 		: 10443
+
+PDC
+IP 		: 78.182.254.244:33134
+Kullanýcý adý 	: GOKTURKLER\romsisadmin
+Parola 		: Ra1937++!
+ 
+Logo
+IP 		: 78.182.254.244:33135
+Kullanýcý adý 	: GOKTURKLER\romsisadmin
+Parola 		: Ra1937++!
+
+//Bu servera 12 içerisinden baðlantý saðlanabilir
+App server 	: 192.168.102.11
+Kullanýcý adý 	: GOKTURKLER\romsisadmin
+Parola 		: Ra1937++!
+
+Sql server 	: 192.168.102.12
+Kullanýcý adý 	: GOKTURKLER\romsisadmin
+Parola 		: Ra1937++!
+
+Sql server IP	: 192.168.102.12\SQLEXPRESS
+sql server name	: LOGO\SQLEXPRESS
+kullanýcý 	: sa
+þifre		: 12345Wq
+
+proje ile ilgili personel 
+Arda Bey	: 0554 534 51 50 
+mail		: import@gokturkler.com
+IT Telefon	: 2125525656
+IT Mail		: ensar.vural@bilisimcenter.com
+
+U: sevk1@gokturkler.com
+P: svKyt00&
+

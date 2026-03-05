@@ -1,0 +1,18 @@
+
+Sicil numarası, ad soyad bilgileri (ad soyad ayrı olacak), 1 aylık uçuşlarını baz alan ( Borç-alacak düşülmüş veya eklenmiş şekliyle ) toplam hakkediş bakiyesi bilgileri Dora2ya gönderilecek. Burada Dora tarafında y.içi ve y.dışı uçuşların hakkediş bakiyesinin ayrı olarak gelmesi talebi üzerinde mutabık kalındı. Ek olarak hak ediş TL olarak gelecektir.
+Ayda 1 defa her ayın 3 veya 4 ünde data gönderimi olacaktır.
+Verilerin alınması için;  Dora FTP alanı oluşturacak, Romsis tarafından hazırlanmış şifrelenmiş dosya buraya atılacaktır (Dosya şifresi dinamik olur). Sonra Dora bu dosyayı kendi sistemine yükleyecek.
+Romsis tarafında api hazırlığı bittiğinde Dora yıl ve ay parametreleri ile bu verileri api katmanına erişip kendi sistemine yazacak, bunun için Dora tarafında bir geliştirme gerekecek.
+
+Dora FTP adresi, kullanıcı bilgilerini Romsis e iletecek ve yetki verecek sonrasında Romsis de dosya transferini sağlayacak. Burada termin için Dora’dan dönüş alacağız.
+
+
+Dora tarafına bu bilgiler bi api ile sağlanacaktır.
+
+
+//xyz.com/api/doraReport
+Sicil No | Ad 		| Soyad 	| Hakediş
+ASD	 | Abdurrahman 	| ELikara 	| 100 tl
+
+
+Perşembe 11:00

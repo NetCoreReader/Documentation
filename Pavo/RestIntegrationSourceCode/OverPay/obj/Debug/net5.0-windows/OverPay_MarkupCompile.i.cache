@@ -1,0 +1,20 @@
+﻿OverPay
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\ROMSIS\OneDrive - romsis.com.tr\Masaüstü\Customer Data\Pavo\RestIntegrationSourceCode\OverPay\obj\Debug\net5.0-windows\
+OverPay
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WİNDOWS7_0_OR_GREATER
+C:\Users\ROMSIS\OneDrive - romsis.com.tr\Masaüstü\Customer Data\Pavo\RestIntegrationSourceCode\OverPay\App.xaml
+17-137294665
+
+96-2142194601
+2611209626006
+Css\MainCss.xaml;MainWindow.xaml;UserController\CancelSaleUC.xaml;UserController\CompleteSaleUC.xaml;UserController\CustomersUC.xaml;UserController\HomeUC.xaml;UserController\MySale.xaml;UserController\ProductCategoryUC.xaml;UserController\ProductUC.xaml;UserController\SaleUC.xaml;UserController\UserSettings.xaml;Windows\Customer\Customer-Edit.xaml;Windows\Login\Login.xaml;Windows\Payment\ExternalPaymentEdit.xaml;Windows\ProductCategory\ProductCategoryEdit.xaml;Windows\Product\Product-edit.xaml;Windows\UserConfSettings\UserConfSetting.xaml;
+
+False
+

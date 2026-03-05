@@ -1,0 +1,15 @@
+VPN Bağlantısı
+Programı kurup pdf dosyasındaki yönergeleri takip edin.
+vpn group	: logo
+vpn user 	: EAS\kadir.kartal
+vpn pass	: d[^2Gy&ks2eW;~Bf
+
+SQL Bağlantısı
+sql server	: 172.17.14.44
+user id		: sa
+sifre		: Skjnx!(8
+
+Server Bağlantısı
+Server		: logoapp01.eas.az:3394
+User Logon name	: eas\romsis
+Password	: 5c0]9c0z]GrCd8,sRFdZ

@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:FetchLegMembers>
+         <!--Optional:-->
+         <tem:UN></tem:UN>
+         <!--Optional:-->
+         <tem:PSW></tem:PSW>
+         <!--Optional:-->
+         <tem:DD>24</tem:DD>
+         <!--Optional:-->
+         <tem:MM>09</tem:MM>
+         <!--Optional:-->
+         <tem:YY>2025</tem:YY>
+         <!--Optional:-->
+         <tem:Flight>183</tem:Flight>
+         <!--Optional:-->
+         <tem:DEP>AYT</tem:DEP>
+      </tem:FetchLegMembers>
+   </soapenv:Body>
+</soapenv:Envelope>

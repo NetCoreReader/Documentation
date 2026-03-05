@@ -1,0 +1,23 @@
+Topics		: TK_LEG_UPDATE_EVENTS,
+Username	: TK_LEG_UPDATE_EVENTS
+Password	: 3cZ2lf8PK=v
+Public ip	: 46.31.112.248, 46.31.112.250, 46.31.112.251
+port		: 9093
+
+Private IP	: 192.168.234.54,192.168.234.55,192.168.234.56
+Port		: 9092
+
+ 
+
+ 
+
+Topic		: AJ_LEG_UPDATE_EVENTS
+Username	: AJ_LEG_UPDATE_EVENTS
+Password	: Mh9!jasdb41 
+Public ip	: 46.31.112.248, 46.31.112.250, 46.31.112.251
+port		: 9093
+
+Private IP	: 192.168.234.54,192.168.234.55,192.168.234.56
+Port		: 9092
+
+ 

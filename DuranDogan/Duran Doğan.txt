@@ -1,0 +1,24 @@
+Server Bilgileri
+Global Protect Id	: 212.156.122.134
+Global Protect Id	: vpn.durandogan.com
+Uygulama sunucusu	: 10.10.11.160
+Sql Sunucusu		: 10.10.11.161
+Test Uygulama sunucusu	: 10.10.11.162
+Test Sql Sunucusu	: 10.10.11.163
+
+dogandom\{kullanýcý adý}
+==================================================
+Kullanýcý		: Kadir KARTAL
+VPN Kullanýcý Adý	: romsis.kkartal
+VPN Þifresi		: K@d!r2@2@!
+==================================================
+Kullanýcý		: Þahin KARTAL
+VPN Kullanýcý Adý	: romsis.skartal
+VPN Þifresi		: S@h!n2@2@!
+==================================================
+Kullanýcý		: Abdurrahman ELÝKARA
+VPN Kullanýcý Adý	: romsis.aelikara
+VPN Þifresi		: Ae2024--++
+==================================================
+
+

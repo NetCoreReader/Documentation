@@ -1,0 +1,30 @@
+FortClient Bilgileri
+Connection Name	: Yukselen-Hadimkoy
+Remote Gateway	: 78.188.30.128
+Customize Port	: 444
+Login Name	: ab-romsis
+Password	: Ar1234!
+
+//admin yetklili
+Server Ýç IP 	: 192.168.10.11
+Server Dýþ IP	: 78.188.30.128:33333
+Kullanýcý adý	: YUKSELEN\romsis
+Parola		: Romsis1937++
+
+Sql Server Ic IP: 192.168.10.11
+Sql Server	: PDC\SQLEXPRESS
+Kullanýcý adý	: sa
+Þifresi		: 12345Wq
+
+Logo Server Ic IP: 192.168.10.13
+Kullanýcý adý	: sa
+Þifresi		: 12345Wq
+
+mail hosting 	: smtp.yandex.com.tr
+kullanýcý mail	: sistem@yukselen.com
+kullanýcý þifre	: yukselen123!
+
+https://passport.yandex.com.tr/profile
+UYGULAMA ÞÝFRE: enyfnpkehsidugbd
+port=587 ye çek.
+ssl=true

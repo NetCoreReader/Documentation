@@ -1,0 +1,30 @@
+SELECT * FROM Erp_InventoryReceipt WHERE ReceiptNo='00010125'
+SELECT FS.RecId,FS.InventoryReceiptId AS ReceiptNo, FS.ItemType, TM.InventoryCode, TM.InventoryName, FS.ItemOrderNo AS [SIRA NO], Explanation, Quantity, UnitPrice, CalcType, VatBaseAmount, ItemTotal, NetUnitPrice, NetItemTotal FROM Erp_InventoryReceiptItem AS FS LEFT OUTER JOIN Meta_UnitSetItem AS UN ON FS.UnitId = UN.RecId LEFT OUTER JOIN Erp_Inventory AS TM ON FS.InventoryId = TM.RecId WHERE InventoryReceiptId = 10671
+
+
+SELECT FS.RecId, FS.ReceiptNo, EMP.EmployeeName,CO.CompanyName,WW.WarehouseName FROM Erp_InventoryReceipt FS
+LEFT OUTER JOIN Erp_Employee EMP ON FS.EmployeeId=EMP.RecId
+LEFT OUTER JOIN Erp_Company CO ON FS.CompanyId=CO.RecId
+LEFT OUTER JOIN Erp_Warehouse WW ON FS.OutWarehouseId=WW.RecId
+
+ WHERE ReceiptType = 121
+
+
+
+	 SELECT
+	 --*FROM Erp_InventoryReceipt FS WHERE fs.ReceiptType = 121 AND fs.RecId=10673
+	fs.RecId,fs.ReceiptNo,fs.ReceiptDate,fs.ReceiptTime,ec.CompanyCode,ec.CompanyName ,wc.WorkplaceCode, wc.WorkplaceName,ww.WarehouseCode,ww.WarehouseName,ee.EmployeeName as [kaydeden],
+	fs.GrandTotal,fs.DiscountsTotal,fs.SubTotal
+ 	FROM Erp_InventoryReceipt FS
+	left outer join Erp_Company ec on fs.CompanyId=ec.RecId
+	left outer join Erp_Workplace wc on fs.WorkplaceId=wc.RecId
+	 left outer join Erp_Warehouse ww on fs.OutWarehouseId=ww.RecId
+	 left outer join Erp_Employee ee on fs.EmployeeId=ee.RecId
+	WHERE fs.ReceiptType = 121 AND fs.RecId=10673
+
+	SELECT FS.RecId,FS.InventoryReceiptId AS ReceiptNo, FS.ItemType, TM.InventoryCode, TM.InventoryName, FS.ItemOrderNo AS [SIRA NO], Quantity, UnitPrice, ItemTotal, DiscountsTotal, VatBaseAmount, NetUnitPrice, NetItemTotal 
+	FROM Erp_InventoryReceiptItem AS FS 
+	LEFT OUTER JOIN Meta_UnitSetItem AS UN ON FS.UnitId = UN.RecId 
+	LEFT OUTER JOIN Erp_Inventory AS TM ON FS.InventoryId = TM.RecId
+	LEFT OUTER JOIN Erp_Employee EMP ON FS.EmployeeId=EMP.RecId 
+	WHERE InventoryReceiptId = 10673 AND ItemType=1

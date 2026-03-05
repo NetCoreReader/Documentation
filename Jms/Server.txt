@@ -1,0 +1,15 @@
+Vpn program url		: https://support.labrisnetworks.com/index.php?/Knowledgebase/Article/View/64/101/labris-ssl-vpn-client
+Vpn kullanıcı adı	: misafir@labris
+Vpn kullanıcı şifresi	: misafir26
+
+Sql Server Bilgisi
+Server IP Adresi	: 192.168.11.3
+Server Kullanıcı adı	: Administrator
+Server Kullanıcı şifresi: meta26.soft
+
+App Server Bilgisi
+Server IP Adresi	: 192.168.11.4
+Server Kullanıcı adı	: romsis
+Server Kullanıcı şifresi: JmsRomsis
+
+\\ROMSIS-SERVER\Romsis\RomsisAPP

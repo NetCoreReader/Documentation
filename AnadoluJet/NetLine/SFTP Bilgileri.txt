@@ -1,0 +1,9 @@
+thysftp.thy.com port:22 üzerinden erişim denemelerini de talep edebilir misiniz?
+Test
+ Your user name is: romsis_sftp
+ Your password is: c9rtoqmV
+
+
+Canlı
+USERNAME: netlineromsis
+ŞİFRE: r4wbmiRh

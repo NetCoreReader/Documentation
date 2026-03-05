@@ -1,0 +1,44 @@
+Pegasus şifre	(Bütün platformalar için aynı)
+Kullanıcı Adı	: ROMSIS.ABDURRAHMANE
+Şifresi		: BTyw?(15
+Şifre yenileme
+Url		: https://aristo.pegasusum.com/
+TC Kimlik	: 41092280444
+Sicil numarası	: 8218026
+Kullanıcı adı ve şifresi telefona sms olarak geliyor.
+
+ 
+
+Şirketimizde VPN ve Microsoft ürünlerine girişte ikili kimlik doğrulama (MFA) kullanılmaktadır.
+Kimlik doğrulama sırasında kullanacağınız ikincil doğrulama yöntemini seçmek için; http://aka.ms/mfasetup sayfasına giriniz.
+
+Kullanıcı adı kısmına kullanıcıadınız@flypgs.com yazmalısınız. Bu sayfada sms ,telefon araması , authenticator gibi seçeneklerden dilediğinizi seçebilirsiniz.
+
+Seçiminiz sms yada telefon araması ise bu sayfaya kullandığınız cep telefonu numaranızı yazmalısınız. Seçimlerinizi tamamlayıp kaydettiğinizde işlem tamamlanmış olacaktır.
+
+VPN bağlantısından sonra;
+https://portal.alero.eu
+adresine gidilir
+
+
+Güvenlik Ekibi Mail Bilgisi
+btguvenlik@flypgs.com
+
+Sunucu Bilgileri
+Redis Sunucusu
+Hostname: tst-payredis
+IP: 172.27.40.152
+CPU: 4 Core CPU
+RAM: 8 GB Ram
+DISK: 80 GB HDD
+OS: Red Hat 9.5
+ 
+ROMSIS API sunucusu 
+Hostname: tst-payapi.flypgs.int
+IP: 172.27.40.150
+CPU: 8 Core CPU
+RAM: 8 GB Ram
+DISK: 120 GB HDD
+OS: Windows Server 2022
+ 
+ 

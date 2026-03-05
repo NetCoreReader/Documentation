@@ -1,0 +1,14 @@
+FortClient Bilgileri
+Connection Name	: DapYapı
+Remote Gateway	: 84.51.26.154
+Customize Port	: 18460
+Login Name	: romsis
+Password	: rms@123dap
+
+Server Bilgileri
+Server İç IP 	: 192.168.2.205
+Kullanıcı adı	: .\administrator
+Parola		: Aa12345!
+
+Sql Bilgileri
+SQL sa		: Aa12345!

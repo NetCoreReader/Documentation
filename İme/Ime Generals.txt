@@ -1,0 +1,14 @@
+VPN Server Name		: 85.105.151.224
+VPN Kullanıcı Adı	: romsis
+VPN Şifresi		: 135Rms135?
+
+crt dosyasına çift tıkla ve yerel makineye yükle
+
+Server İç IP		: 192.168.2.100
+Server Şifresi  	: !123Ime123@@!
+Wifi Şifresi  		: !123ime123@
+
+
+
+
+

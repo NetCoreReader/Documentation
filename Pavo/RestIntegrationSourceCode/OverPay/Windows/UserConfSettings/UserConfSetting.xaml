@@ -1,0 +1,32 @@
+﻿<Window x:Class="OverPay.Windows.UserConfSettings.UserConfSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OverPay.Windows.UserConfSettings"
+        mc:Ignorable="d"
+        Title="UserConfSetting" Height="450" Width="424">
+ 
+        <Grid Margin="0,0,302,0">
+            <Canvas x:Name="Payment"  HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Border Height="431" Width="420" Background="#F3F0ED"/>
+                <Label Content="Config Settings" Foreground="White" FontSize="22" Height="45" Width="420" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Panel.ZIndex="3"/>
+                <Rectangle Height="45" Width="420" Fill="#52BE80"/>
+
+                <DockPanel Margin="0,64,0,0">
+                    <Label Content="IP"></Label>
+                    <TextBox x:Name="IPTxt"   HorizontalContentAlignment="Left"  Height="30"></TextBox>
+                </DockPanel>
+                <DockPanel Margin="0,114,0,0">
+                    <Label Content="Port"></Label>
+                    <TextBox x:Name="PortTxt"   HorizontalContentAlignment="Left"  Height="30"></TextBox>
+                </DockPanel>
+                <DockPanel Margin="0,164,0,0">
+                    <Label Content="Seri Mumarası"></Label>
+                    <TextBox x:Name="SerialMumberTxt"   HorizontalContentAlignment="Left"  Height="30"></TextBox>
+                </DockPanel>
+                <Button x:Name="UpdateConfig"  Margin="268,224,102,28"  Content="Update" Background="Blue" Click="UpdateConfig_Click"/>
+                <Button x:Name="CANCEL_BUTTON" Margin="150,224,102,28"   Content="İptal" Background="#E74C3C"  />
+            </Canvas>
+        </Grid>
+</Window>

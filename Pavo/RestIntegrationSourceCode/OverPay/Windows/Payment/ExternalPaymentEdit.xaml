@@ -1,0 +1,48 @@
+﻿<Window x:Class="OverPay.Windows.Payment.ExternalPaymentEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OverPay.Windows.Payment"
+      mc:Ignorable="d" 
+      d:DesignHeight="480"
+      Title="" Width="420">
+
+    <Grid>
+        <Canvas x:Name="Payment"  HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Border VerticalAlignment="Top" HorizontalAlignment="Left" Height="480" Width="420" Background="#F3F0ED">
+            </Border>
+            <Label Content="External Payment" Foreground="White" FontSize="22" Height="45" Width="420" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Panel.ZIndex="3"/>
+            <Rectangle Height="45" Width="420" Fill="#52BE80"/>
+            <DockPanel Margin="0,65,0,0">
+                <Label Content="Type"></Label>
+                <ComboBox x:Name="PaymentTypeCmb" DisplayMemberPath="Name" 
+            SelectedValuePath="Id"   FontWeight="ExtraLight"  HorizontalContentAlignment="Left" SelectionChanged="PaymentType_SelectionChanged"></ComboBox>
+            </DockPanel>
+            <DockPanel Margin="0,120,0,0">
+                <Label Content="Mediator"></Label>
+                <ComboBox x:Name="PaymentMediatorCmb" DisplayMemberPath="Name" 
+            SelectedValuePath="Id" FontWeight="ExtraLight"  HorizontalContentAlignment="Left" SelectionChanged="PaymentMediator_SelectionChanged"></ComboBox>
+            </DockPanel>
+            <DockPanel Margin="0,180,0,0">
+                <Label Content="Brand"></Label>
+                <ComboBox x:Name="PaymentProviderBrandCmb" DisplayMemberPath="PaymentProviderBrandName" 
+            SelectedValuePath="Id"   FontWeight="ExtraLight"  HorizontalContentAlignment="Left"></ComboBox>
+            </DockPanel>
+            <DockPanel Margin="0,240,0,0">
+                <Label Content="Amount"></Label>
+                <TextBox x:Name="AmountTxt"   HorizontalContentAlignment="Left"  Height="30"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="0,300,0,0">
+                <Label Content="Card No"></Label>
+                <TextBox x:Name="CardNoTxt"   HorizontalContentAlignment="Left"  Height="30"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="0,360,0,0">
+                <Label Content="Auth Code"></Label>
+                <TextBox x:Name="AutherazitonTxt"   HorizontalContentAlignment="Left"  Height="30"></TextBox>
+            </DockPanel>
+            <Button x:Name="AddPayment"  Margin="268,422,102,28"  Content="{Binding DataContext.ButtonContent}" Background="{Binding DataContext.ButtonColor}" Click="AddPayment_Click"/>
+            <Button x:Name="CANCEL_BUTTON" Margin="150,422,102,28"   Content="İptal" Background="#E74C3C"  />
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,69 @@
+"client_id": "ROMSIS",
+"client_secret": "+odTyqeFa/6Gmd9aR3diEOyN16X+zqxUvoSMT2Q+HnU=",
+
+
+"SqlCnn": "Server=172.30.1.13; User ID=sa; PASSWORD=UA!U16Xz; TrustServerCertificate=True; database = Bob_Ajet_Test"
+"SqlCnn": "Server=172.30.1.17; User ID=sa; PASSWORD=UA!U16Xz; TrustServerCertificate=True; database = Bob_Ajet"
+"SqlCnn": "Server=172.30.1.18; User ID=sa; PASSWORD=UA!U16Xz; TrustServerCertificate=True; database = Bob_Freebird"
+
+Tekirdağ IIS Server
+IP Adres	: 172.30.1.10
+Kullanıcı Adı	: a.elikara@romsis.local
+Şifre		: Domain Şifresi
+DNS		: TEKIRDAG
+iistest.romsis.com	194.62.53.5
+
+VM03 Server
+IP Adres	: 172.30.1.12
+N Kullanıcı Adı : a.elikara
+A Kullanıcı Adı	: VM03\Administrator
+A Şifre		: !R0mSis@25!
+
+Test Sql Server
+IP Adres	: 172.30.1.13
+Kullanıcı Adı	: Administrator
+Şifre		: R0mSis2@24!!
+
+Freebird Sql Server
+IP Adres	: 172.30.1.14
+Sql Adres	: 172.30.1.18
+Kullanıcı Adı	: a.elikara
+Şifre		: SM4551sm
+
+Ajet Sql Server
+IP Adres	: 172.30.1.15
+Sql Adres	: 172.30.1.17
+Kullanıcı Adı	: a.elikara
+Şifre		: SM4551sm
+
+Logo Server 
+IP Adres	: 172.30.1.22
+Kullanıcı Adı	: a.elikara@romsis.local
+Şifre		: Domain Şifresi
+
+İsim Tescil
+Kullanıcı Adı 	: a.elikara@romsis.com.tr
+Şifre 		: SM4551sm25
+
+SQL Bilgileri
+IP Adres	: 85.111.94.85
+SQL Adı		: sa
+SQL Şifre	: UA!U16Xz
+
+Delta Gmail Bilgileri
+Gmail Adresi	: romsishr@gmail.com
+Gmail Şifresi	: SM4551sm
+Gmail Uygulama	: ritu epdw lhtf ocyu
+
+Ofis Vpn Bilgileri
+Url Bilgisi	: https://85.100.126.229/
+Kullanıcı Adı	: abdurrahman.elikara
+Şifre		: 768WNFkpwG!
+Ofis Ping ip	: 172.20.20.1
+
+Ssl sertifika pfx şifresi: 123
+
+Güncel VPN
+Url		: https://sslvpn.layersistem.net:8444/
+Kullanıcı Adı	: a.elikara
+Şifre		: 60{5l)E7D&#u

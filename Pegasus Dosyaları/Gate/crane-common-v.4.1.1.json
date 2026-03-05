@@ -1,0 +1,2238 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Common Api Documentation",
+        "description": "Common Api Documentation",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://springdoc.org"
+        },
+        "version": "v4.1.1"
+    },
+    "externalDocs": {
+        "description": "Crane Wiki Documentation",
+        "url": "https://crane-wiki.hititdc.com/docs"
+    },
+    "servers": [
+        {
+            "url": "https://bfprep-common.flypgs.com/crane-common",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/login/auth/code": {
+            "post": {
+                "tags": [
+                    "two-factor-auth-service-rest-impl"
+                ],
+                "summary": "Send Login Auth Code",
+                "description": "By Using User Contact Email And Phone ",
+                "operationId": "sendLoginTwoFactorAuthCode",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TwoFactorAuthResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/code/send/{pnrNo}": {
+            "post": {
+                "tags": [
+                    "two-factor-auth-service-rest-impl"
+                ],
+                "summary": "Send Auth Code",
+                "description": "By Using Pnr Contact Email And Phone ",
+                "operationId": "sendTwoFactorAuthCode",
+                "parameters": [
+                    {
+                        "name": "pnrNo",
+                        "in": "path",
+                        "description": "Reservation Number",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "surname",
+                        "in": "query",
+                        "description": "Passenger's surname",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "giftCardId",
+                        "in": "query",
+                        "description": "Gift Card Id",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "action",
+                        "in": "query",
+                        "description": "Two Factor Auth Action",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "RETRIEVE_PNR",
+                                "TICKET_PNR_WITH_GIFT_CARD",
+                                "SELL_SSR_WITH_GIFT_CARD",
+                                "LOGIN",
+                                "PERSONNEL"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TwoFactorAuthResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/code/check": {
+            "post": {
+                "tags": [
+                    "two-factor-auth-service-rest-impl"
+                ],
+                "summary": "Check Auth Code",
+                "description": "Check Authentication Code And Pnr",
+                "operationId": "checkAuthCode",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CheckTwoFactorAuthRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/OperationResultResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/supportedLanguages": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Supported Languages",
+                "operationId": "getSupportedLanguages",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/SupportedLanguages"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ports": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get All Ports",
+                "description": "Gets all ports with all port data",
+                "operationId": "getPorts",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Port"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/portName": {
+            "get": {
+                "tags": [
+                    "port-matrix-service-rest-impl"
+                ],
+                "summary": "Get Port Name By Language",
+                "description": "Retrieves all port name by language",
+                "operationId": "getPortNameList",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PortNameResponse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/portMatrixWithCode/{carrierCode}": {
+            "get": {
+                "tags": [
+                    "port-matrix-service-rest-impl"
+                ],
+                "summary": "Get Port Code",
+                "description": "Retrieves all pairs with connected port",
+                "operationId": "getPortMatrixWithCode",
+                "parameters": [
+                    {
+                        "name": "carrierCode",
+                        "in": "path",
+                        "description": "Carrier Code",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PortMatrixByCodeResponse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/portMatrixDepPort": {
+            "get": {
+                "tags": [
+                    "port-matrix-service-rest-impl"
+                ],
+                "summary": "Get Departure Ports",
+                "description": "Retrieves all departure ports",
+                "operationId": "getPortMatrixDepPort",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PortMatrixDepResponse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/portMatrixArrPort/{depPort}": {
+            "get": {
+                "tags": [
+                    "port-matrix-service-rest-impl"
+                ],
+                "summary": "Get Arrival Ports",
+                "description": "Retrieves all arrival ports",
+                "operationId": "getPortMatrixArrPort",
+                "parameters": [
+                    {
+                        "name": "depPort",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PortMatrixArrResponse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/portMatrix/{carrierCode}": {
+            "get": {
+                "tags": [
+                    "port-matrix-service-rest-impl"
+                ],
+                "summary": "Get Port Matrix",
+                "description": "Retrieves all pairs with connected port",
+                "operationId": "getPortMatrixIncludingConnectedPort",
+                "parameters": [
+                    {
+                        "name": "carrierCode",
+                        "in": "path",
+                        "description": "Carrier Code",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/PortMatrixResponse"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/params": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get All Params",
+                "description": "Gets all parameters",
+                "operationId": "getAllParam",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Param"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/param/{paramName}": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get Param",
+                "description": "Gets parameter info by using parameter name ",
+                "operationId": "getParam",
+                "parameters": [
+                    {
+                        "name": "paramName",
+                        "in": "path",
+                        "description": "Parameter Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Param"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/flightTimeStatistics": {
+            "get": {
+                "tags": [
+                    "actual-flight-operations-service-rest-impl"
+                ],
+                "summary": "Flight time statistics",
+                "description": "Gets flight time statistics",
+                "operationId": "getFlightTimeStatistics",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/FlightTimeStatistics"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/flightTimeStatistics/{selectedYear}": {
+            "get": {
+                "tags": [
+                    "actual-flight-operations-service-rest-impl"
+                ],
+                "summary": "Flight time statistics for selected year",
+                "description": "Gets flight time statistics for selected year",
+                "operationId": "getFlightTimeStatisticsMonthlyByYear",
+                "parameters": [
+                    {
+                        "name": "selectedYear",
+                        "in": "path",
+                        "description": "Selected Year",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/FlightTimeStatistics"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/currencyCombo": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get Currency Combo",
+                "description": "Gets currency combo",
+                "operationId": "getCurrencyCombo",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/countries": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get All Countries",
+                "description": "Gets all countries with all languages and codes (icao codes and normal codes)",
+                "operationId": "getCountries",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Country"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/combos": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get Combos",
+                "description": "Gets all comboNames",
+                "operationId": "getCombos",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/comboValues/{comboName}": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get Combo Values",
+                "description": "Gets all values of a specific combo name that is requested",
+                "operationId": "getComboValues",
+                "parameters": [
+                    {
+                        "name": "comboName",
+                        "in": "path",
+                        "description": "Combo Name",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ComboValue"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/city/theme": {
+            "get": {
+                "tags": [
+                    "search-by-budget-service-rest-impl"
+                ],
+                "summary": "Get City Themes",
+                "description": "Return City-Themes",
+                "operationId": "retrieveCityThemes",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CityTheme"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/cities": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get All Cities",
+                "description": "Gets all cities with all languages and codes",
+                "operationId": "getCities",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/City"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/actualFlightInfo": {
+            "get": {
+                "tags": [
+                    "actual-flight-operations-service-rest-impl"
+                ],
+                "summary": "Generate Flight Info",
+                "description": "Generate flight informations by taking flight date, flight number, departure and arrival ports",
+                "operationId": "generateActualFlightInfo",
+                "parameters": [
+                    {
+                        "name": "flightDate",
+                        "in": "query",
+                        "description": "Flight Date",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "depPort",
+                        "in": "query",
+                        "description": "Departure Port",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "arrPort",
+                        "in": "query",
+                        "description": "Arrival Port",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "flightNumber",
+                        "in": "query",
+                        "description": "Flight Number",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ActualFlight"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/activePorts": {
+            "get": {
+                "tags": [
+                    "common-service-rest-impl"
+                ],
+                "summary": "Get Active Ports",
+                "description": "Gets active ports with port data",
+                "operationId": "getActivePorts",
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Port"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ClientErrorInfo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/ClientValidationErrorInfo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ClientErrorInfo": {
+                "type": "object",
+                "properties": {
+                    "errorCode": {
+                        "type": "string"
+                    },
+                    "errorMessage": {
+                        "type": "string"
+                    },
+                    "errorCause": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PhoneNumber": {
+                "required": [
+                    "phoneCountryCode",
+                    "phoneNumber"
+                ],
+                "type": "object",
+                "properties": {
+                    "phoneCountryCode": {
+                        "type": "string",
+                        "description": "Country code (90)"
+                    },
+                    "phoneAreaCode": {
+                        "type": "string",
+                        "description": "Area code (505)"
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "description": "Phone number (4678321)"
+                    }
+                }
+            },
+            "TwoFactorAuthResponse": {
+                "required": [
+                    "emailSent",
+                    "phone",
+                    "pnrId",
+                    "smsSent"
+                ],
+                "type": "object",
+                "properties": {
+                    "pnrId": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "$ref": "#/components/schemas/PhoneNumber"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "smsSent": {
+                        "type": "boolean"
+                    },
+                    "emailSent": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "CheckTwoFactorAuthRequest": {
+                "required": [
+                    "authCode",
+                    "pnrId"
+                ],
+                "type": "object",
+                "properties": {
+                    "pnrId": {
+                        "type": "string"
+                    },
+                    "authCode": {
+                        "type": "string"
+                    },
+                    "action": {
+                        "type": "string",
+                        "enum": [
+                            "RETRIEVE_PNR",
+                            "TICKET_PNR_WITH_GIFT_CARD",
+                            "SELL_SSR_WITH_GIFT_CARD",
+                            "LOGIN",
+                            "PERSONNEL"
+                        ]
+                    }
+                }
+            },
+            "OperationResultResponse": {
+                "required": [
+                    "result"
+                ],
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "type": "boolean"
+                    },
+                    "resultExplanation": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ClientValidationErrorInfo": {
+                "type": "object",
+                "properties": {
+                    "errorCode": {
+                        "type": "string"
+                    },
+                    "errorField": {
+                        "type": "string"
+                    },
+                    "explanation": {
+                        "type": "string"
+                    }
+                }
+            },
+            "SupportedLanguages": {
+                "required": [
+                    "langCode",
+                    "langName"
+                ],
+                "type": "object",
+                "properties": {
+                    "langCode": {
+                        "type": "string"
+                    },
+                    "langName": {
+                        "type": "string"
+                    },
+                    "activeForMobile": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Port": {
+                "type": "object",
+                "properties": {
+                    "minGrTimeDomDom": {
+                        "type": "string"
+                    },
+                    "minGrTimeDomInt": {
+                        "type": "string"
+                    },
+                    "minGrTimeIntDom": {
+                        "type": "string"
+                    },
+                    "minGrTimeIntInt": {
+                        "type": "string"
+                    },
+                    "minGrTimeOpsType": {
+                        "type": "string"
+                    },
+                    "maxGrTimeDomDom": {
+                        "type": "string"
+                    },
+                    "maxGrTimeDomInt": {
+                        "type": "string"
+                    },
+                    "maxGrTimeIntDom": {
+                        "type": "string"
+                    },
+                    "maxGrTimeIntInt": {
+                        "type": "string"
+                    },
+                    "maxGrTimeOpsType": {
+                        "type": "string"
+                    },
+                    "minPct": {
+                        "type": "string"
+                    },
+                    "maxPct": {
+                        "type": "string"
+                    },
+                    "fuelUnitPriceLt": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "monetaryUnit": {
+                        "type": "string"
+                    },
+                    "technicServicesAvailable": {
+                        "type": "string"
+                    },
+                    "transitTimeToHotel": {
+                        "type": "string"
+                    },
+                    "timeZone": {
+                        "type": "string"
+                    },
+                    "pullDownControl": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "shortNameEn": {
+                        "type": "string"
+                    },
+                    "shortNameTr": {
+                        "type": "string"
+                    },
+                    "shortNameDe": {
+                        "type": "string"
+                    },
+                    "shortNameFr": {
+                        "type": "string"
+                    },
+                    "shortNameNl": {
+                        "type": "string"
+                    },
+                    "shortNameRu": {
+                        "type": "string"
+                    },
+                    "dstRuleIsn": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "iataDstRuleIsn": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "shortNameDa": {
+                        "type": "string"
+                    },
+                    "shortNameIt": {
+                        "type": "string"
+                    },
+                    "shortNameHe": {
+                        "type": "string"
+                    },
+                    "shortNameSv": {
+                        "type": "string"
+                    },
+                    "isAbPort": {
+                        "type": "string"
+                    },
+                    "timeZoneCode": {
+                        "type": "string"
+                    },
+                    "shortNameEs": {
+                        "type": "string"
+                    },
+                    "shortNameAr": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "latdeg": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "latmin": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "latsgn": {
+                        "type": "string"
+                    },
+                    "londeg": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lonmin": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "lonsgn": {
+                        "type": "string"
+                    },
+                    "shortName": {
+                        "type": "string"
+                    },
+                    "icaoCode": {
+                        "type": "string"
+                    },
+                    "terminalInfo": {
+                        "type": "string"
+                    },
+                    "areaCode": {
+                        "type": "string"
+                    },
+                    "category": {
+                        "type": "string"
+                    },
+                    "utcDifference": {
+                        "type": "string"
+                    },
+                    "utcDiffrenceAtDst": {
+                        "type": "string"
+                    },
+                    "sunriseSummer": {
+                        "type": "string"
+                    },
+                    "sunsetSummer": {
+                        "type": "string"
+                    },
+                    "sunriseWinter": {
+                        "type": "string"
+                    },
+                    "sunsetWinter": {
+                        "type": "string"
+                    },
+                    "alternateStationIataCode1": {
+                        "type": "string"
+                    },
+                    "alternateStationIataCode2": {
+                        "type": "string"
+                    },
+                    "alternateStationIcaoCode1": {
+                        "type": "string"
+                    },
+                    "alternateStationIcaoCode2": {
+                        "type": "string"
+                    },
+                    "curfewHrsIntOpenFrom": {
+                        "type": "string"
+                    },
+                    "curfewHrsIntOpenTo": {
+                        "type": "string"
+                    },
+                    "curfewHrsDomOpenFrom": {
+                        "type": "string"
+                    },
+                    "curfewHrsDomOpenTo": {
+                        "type": "string"
+                    },
+                    "airportRestrictionsRemarks": {
+                        "type": "string"
+                    },
+                    "aircraftRestrictionsRemarks": {
+                        "type": "string"
+                    },
+                    "countryCode": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "zone": {
+                        "type": "string"
+                    },
+                    "area": {
+                        "type": "string"
+                    },
+                    "latitude": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "longitude": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                }
+            },
+            "PortNameResponse": {
+                "type": "object",
+                "properties": {
+                    "portCode": {
+                        "type": "string"
+                    },
+                    "portNameEN": {
+                        "type": "string"
+                    },
+                    "portNameTR": {
+                        "type": "string"
+                    },
+                    "portNameDE": {
+                        "type": "string"
+                    },
+                    "portNameFR": {
+                        "type": "string"
+                    },
+                    "portNameNL": {
+                        "type": "string"
+                    },
+                    "portNameRU": {
+                        "type": "string"
+                    },
+                    "portNameDA": {
+                        "type": "string"
+                    },
+                    "portNameIT": {
+                        "type": "string"
+                    },
+                    "portNameHE": {
+                        "type": "string"
+                    },
+                    "portNameSV": {
+                        "type": "string"
+                    },
+                    "portNameES": {
+                        "type": "string"
+                    },
+                    "portNameAR": {
+                        "type": "string"
+                    },
+                    "portName": {
+                        "type": "string"
+                    }
+                }
+            },
+            "LocationInfo": {
+                "required": [
+                    "cityCode",
+                    "portCode"
+                ],
+                "type": "object",
+                "properties": {
+                    "portCode": {
+                        "type": "string"
+                    },
+                    "cityCode": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    },
+                    "terminal": {
+                        "type": "string"
+                    },
+                    "portName": {
+                        "type": "string"
+                    },
+                    "cityName": {
+                        "type": "string"
+                    },
+                    "countryName": {
+                        "type": "string"
+                    },
+                    "portNameDefault": {
+                        "type": "string"
+                    },
+                    "domestic": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "PortMatrixByCodeResponse": {
+                "required": [
+                    "arrLocation",
+                    "carrierCode",
+                    "depLocation"
+                ],
+                "type": "object",
+                "properties": {
+                    "depLocation": {
+                        "$ref": "#/components/schemas/LocationInfo"
+                    },
+                    "arrLocation": {
+                        "$ref": "#/components/schemas/LocationInfo"
+                    },
+                    "depPortName": {
+                        "type": "string"
+                    },
+                    "arrPortName": {
+                        "type": "string"
+                    },
+                    "eligibleSoldierStudent": {
+                        "type": "boolean"
+                    },
+                    "segmentType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "connectionPort": {
+                        "type": "string"
+                    },
+                    "carrierCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "LocationDetail": {
+                "type": "object",
+                "properties": {
+                    "portName": {
+                        "type": "string"
+                    },
+                    "portCode": {
+                        "type": "string"
+                    },
+                    "cityName": {
+                        "type": "string"
+                    },
+                    "keywords": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "domestic": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "PortMatrixDepResponse": {
+                "required": [
+                    "ports"
+                ],
+                "type": "object",
+                "properties": {
+                    "countryName": {
+                        "type": "string"
+                    },
+                    "countryCode": {
+                        "type": "string"
+                    },
+                    "ports": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocationDetail"
+                        }
+                    }
+                }
+            },
+            "PortMatrixArrResponse": {
+                "type": "object",
+                "properties": {
+                    "portCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "PortMatrixResponse": {
+                "required": [
+                    "arrLocation",
+                    "carrierCode",
+                    "depLocation"
+                ],
+                "type": "object",
+                "properties": {
+                    "depLocation": {
+                        "$ref": "#/components/schemas/LocationInfo"
+                    },
+                    "arrLocation": {
+                        "$ref": "#/components/schemas/LocationInfo"
+                    },
+                    "depPortNameEN": {
+                        "type": "string"
+                    },
+                    "depPortNameTR": {
+                        "type": "string"
+                    },
+                    "depPortNameDE": {
+                        "type": "string"
+                    },
+                    "depPortNameFR": {
+                        "type": "string"
+                    },
+                    "depPortNameNL": {
+                        "type": "string"
+                    },
+                    "depPortNameRU": {
+                        "type": "string"
+                    },
+                    "depPortNameDA": {
+                        "type": "string"
+                    },
+                    "depPortNameIT": {
+                        "type": "string"
+                    },
+                    "depPortNameHE": {
+                        "type": "string"
+                    },
+                    "depPortNameSV": {
+                        "type": "string"
+                    },
+                    "depPortNameES": {
+                        "type": "string"
+                    },
+                    "depPortNameAR": {
+                        "type": "string"
+                    },
+                    "arrPortNameEN": {
+                        "type": "string"
+                    },
+                    "arrPortNameTR": {
+                        "type": "string"
+                    },
+                    "arrPortNameDE": {
+                        "type": "string"
+                    },
+                    "arrPortNameFR": {
+                        "type": "string"
+                    },
+                    "arrPortNameNL": {
+                        "type": "string"
+                    },
+                    "arrPortNameRU": {
+                        "type": "string"
+                    },
+                    "arrPortNameDA": {
+                        "type": "string"
+                    },
+                    "arrPortNameIT": {
+                        "type": "string"
+                    },
+                    "arrPortNameHE": {
+                        "type": "string"
+                    },
+                    "arrPortNameSV": {
+                        "type": "string"
+                    },
+                    "arrPortNameES": {
+                        "type": "string"
+                    },
+                    "arrPortNameAR": {
+                        "type": "string"
+                    },
+                    "eligibleSoldierStudent": {
+                        "type": "boolean"
+                    },
+                    "segmentType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "connectionPort": {
+                        "type": "string"
+                    },
+                    "carrierCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Param": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "explanation": {
+                        "type": "string"
+                    }
+                }
+            },
+            "FlightTimeStatistics": {
+                "type": "object",
+                "properties": {
+                    "statisticsMonth": {
+                        "type": "string"
+                    },
+                    "statisticsYear": {
+                        "type": "string"
+                    },
+                    "statisticsDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "lbl": {
+                        "type": "string"
+                    },
+                    "interval": {
+                        "type": "string"
+                    },
+                    "intervalStart": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "intervalEnd": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "fltCnt": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "onTime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "empty": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "ratio": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "isPublish": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Country": {
+                "required": [
+                    "code",
+                    "displayOrder"
+                ],
+                "type": "object",
+                "properties": {
+                    "countryNameEs": {
+                        "type": "string"
+                    },
+                    "code": {
+                        "type": "string"
+                    },
+                    "countryNameEn": {
+                        "type": "string"
+                    },
+                    "countryNameTr": {
+                        "type": "string"
+                    },
+                    "countryNameDe": {
+                        "type": "string"
+                    },
+                    "countryNameFr": {
+                        "type": "string"
+                    },
+                    "countryNumericCode": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "countryIsoIcaoCode": {
+                        "type": "string"
+                    },
+                    "countryNameNl": {
+                        "type": "string"
+                    },
+                    "countryNameRu": {
+                        "type": "string"
+                    },
+                    "countryNameDa": {
+                        "type": "string"
+                    },
+                    "countryNameIt": {
+                        "type": "string"
+                    },
+                    "countryNameHe": {
+                        "type": "string"
+                    },
+                    "countryNameSv": {
+                        "type": "string"
+                    },
+                    "countryNameAr": {
+                        "type": "string"
+                    },
+                    "displayOrder": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            },
+            "ComboValue": {
+                "type": "object",
+                "properties": {
+                    "comboName": {
+                        "type": "string"
+                    },
+                    "comboValue": {
+                        "type": "string"
+                    },
+                    "comboLabel": {
+                        "type": "string"
+                    },
+                    "displayOrder": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            },
+            "CityTheme": {
+                "required": [
+                    "cityCode",
+                    "themeId"
+                ],
+                "type": "object",
+                "properties": {
+                    "themeId": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "cityCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "City": {
+                "required": [
+                    "area",
+                    "code",
+                    "country",
+                    "state",
+                    "zone"
+                ],
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    },
+                    "shortNameTr": {
+                        "type": "string"
+                    },
+                    "shortNameEn": {
+                        "type": "string"
+                    },
+                    "shortNameDe": {
+                        "type": "string"
+                    },
+                    "shortNameFr": {
+                        "type": "string"
+                    },
+                    "shortNameRu": {
+                        "type": "string"
+                    },
+                    "shortNameNl": {
+                        "type": "string"
+                    },
+                    "shortNameDa": {
+                        "type": "string"
+                    },
+                    "shortNameIt": {
+                        "type": "string"
+                    },
+                    "shortNameHe": {
+                        "type": "string"
+                    },
+                    "shortNameSv": {
+                        "type": "string"
+                    },
+                    "shortNameEs": {
+                        "type": "string"
+                    },
+                    "shortNameAr": {
+                        "type": "string"
+                    },
+                    "area": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "zone": {
+                        "type": "string"
+                    },
+                    "displayOrder": {
+                        "type": "integer",
+                        "description": "lookUpOrder",
+                        "format": "int64"
+                    }
+                }
+            },
+            "ActualFlight": {
+                "type": "object",
+                "properties": {
+                    "schDepDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "schArrDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "actDepDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "actArrDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "estDepDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "estArrDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "depLocationInfo": {
+                        "$ref": "#/components/schemas/LocationInfo"
+                    },
+                    "arrLocationInfo": {
+                        "$ref": "#/components/schemas/LocationInfo"
+                    },
+                    "aaCode": {
+                        "type": "string"
+                    },
+                    "fltNo": {
+                        "type": "string"
+                    },
+                    "flightNo": {
+                        "type": "string"
+                    },
+                    "schDepDateUtc": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "schArrDateUtc": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "schDepDateLimit": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "schArrDateLimit": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "utcActDepDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "utcActArrDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "utcEstDepDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "utcEstArrDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "acType": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "fcStatus": {
+                        "type": "string"
+                    },
+                    "divPort": {
+                        "type": "string"
+                    },
+                    "gate": {
+                        "type": "string"
+                    },
+                    "park": {
+                        "type": "string"
+                    },
+                    "belt": {
+                        "type": "string"
+                    },
+                    "carousel": {
+                        "type": "string"
+                    },
+                    "fltStatus": {
+                        "type": "string",
+                        "enum": [
+                            "DEPARTED",
+                            "OFF_BLOCK",
+                            "AIRBORN",
+                            "ON_BLOCK",
+                            "TOUCH_DOWN",
+                            "LANDED",
+                            "DIVERTED",
+                            "CANCELLED",
+                            "DELAYED",
+                            "FORCED_RETURN",
+                            "RETURN_TO_RAMP"
+                        ]
+                    },
+                    "fcStatusComment": {
+                        "type": "string"
+                    },
+                    "plnDepDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            }
+        }
+    }
+}

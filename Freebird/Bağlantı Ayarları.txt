@@ -1,0 +1,23 @@
+Vpn Bağlantısı
+
+Server Bağlantısı
+Server Ip Adres	: 172.31.238.26
+Kullanıcı Adı	: gozen\romsisadm
+Şifresi		: Y22nSvXFS9q6
+
+Sql Server Bağlantısı
+Sql Name Address: SQLLS01.gozen.systems
+Sql Ip Address	: 172.31.12.9
+DatabaseName	: RomsisDB
+Kullanıcı Adı	: romsisdbadm
+Şifresi		: Y22nSvXFS9q6
+
+Bağlantı için mail adresleri
+Yeliz Dogan	: yeliz.dogan@gozendigital.com
+Yeliz Dogan	: samet.velidedeoglu@freebirdairlines.com
+
+
+BitBucket 
+Url		: https://bitbucket.gozen.systems/
+kulllanıcı adı 	: Romsis
+şifre 		: u$38!osVGS3JIkoQ

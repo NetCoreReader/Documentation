@@ -1,0 +1,32 @@
+85.100.126.229 IP adresi üzerinden Logo SQL Test Sunucusuna RDP bağlantısı yapabilirsiniz.
+
+
+LOGO SQL Test Server IP:212.252.68.169:33901
+DOMAIN: MGA
+ID: logo.support
+PASS: Mgs5520***
+
+
+///////////////Mavigök Logo Server
+Logo  212.252.68.169:33899
+DOMAIN: MGA
+ID: logo.support
+PASS: 6238MgRm1408!$**
+
+
+///////////////Mavigök IIS Server
+Url:  LG0900670301.mgaapps.com:33905
+ID: MGA\logo.support
+PASS: Qn1K-58.541zxB3fcEv!
+SQL Pass: 652814MgRm@@!!
+
+http://inflight.mga.local/
+http://212.252.68.169
+http://46.28.235.251
+
+
+////////Logo Sql Bilgileri
+Ip Adres	: 10.7.5.13
+Kullanıcı Adı	: logo
+Şifresi		: Mgh985*ad
+Database	: LOGO

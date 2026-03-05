@@ -1,0 +1,6 @@
+SERVER REMOTE USER : erp.eas.az:3390
+user : ganjamall@eas.az
+pass: @ngryPlant48
+sql user: sa
+sql pass: Sentez123
+data ismi stories

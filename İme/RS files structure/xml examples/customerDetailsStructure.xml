@@ -1,0 +1,86 @@
+<CustomerResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://apis.rscore.cataloguesolutions.com/">
+  <listModelCustomer>
+    <Customer>
+      <DateRegistered xmlns="CatalogueSolutions.RSWeb.Model"></DateRegistered>
+      <Id xmlns="CatalogueSolutions.RSWeb.Model"></Id>
+      <Title xmlns="CatalogueSolutions.RSWeb.Model"/>
+      <Name xmlns="CatalogueSolutions.RSWeb.Model"></Name>
+      <Surname xmlns="CatalogueSolutions.RSWeb.Model"></Surname>
+      <Telephone xmlns="CatalogueSolutions.RSWeb.Model"></Telephone>
+      <Email xmlns="CatalogueSolutions.RSWeb.Model"></Email>
+      <!--
+      not currently being populated - can be ignored
+      <JobTechnology xmlns="CatalogueSolutions.RSWeb.Model">
+        <Name/>
+        <Type>JobTechnology</Type>
+        <Id>-1</Id>
+      </JobTechnology>
+      <JobFunction xmlns="CatalogueSolutions.RSWeb.Model">
+        <Name/>
+        <Type>JobFunction</Type>
+        <Id>-1</Id>
+      </JobFunction>
+      <Referrer xmlns="CatalogueSolutions.RSWeb.Model">
+        <Id>-1</Id>
+        <Name/>
+      </Referrer>-->
+      <Subscribed xmlns="CatalogueSolutions.RSWeb.Model"><!--e.g.: true--></Subscribed>
+      <!--addresses of the customer-->
+      <Addresses xmlns="CatalogueSolutions.RSWeb.Model">
+        <CustomerAddress>
+          <Company>ere</Company>
+          <Department/>
+          <Address1>1</Address1>
+          <Address2>5</Address2>
+          <Address3>1</Address3>
+          <Address4/>
+          <Country>Malta</Country>
+          <Address5/>
+          <Address6/>
+          <Id>41219</Id>
+          <CustomerId>39249</CustomerId>
+          <VatNo>VAT</VatNo>
+          <IsDefault>true</IsDefault>
+        </CustomerAddress>
+        <CustomerAddress>
+          <Company/>
+          <Department/>
+          <Address1>Address1</Address1>
+          <Address2>aaa</Address2>
+          <Address3>a</Address3>
+          <Address4/>
+          <Country>Malta</Country>
+          <Address5/>
+          <Address6/>
+          <Id>43518</Id>
+          <CustomerId>39249</CustomerId>
+          <VatNo/>
+          <IsDefault>false</IsDefault>
+        </CustomerAddress>
+      </Addresses>
+      <Username xmlns="CatalogueSolutions.RSWeb.Model"></Username>
+      <!--not currently filled in, please ignore-->
+      <DefaultPaymentMethodId xmlns="CatalogueSolutions.RSWeb.Model">-1</DefaultPaymentMethodId>
+      <!--default customer discount (a more complex discount mechanism was introduced after the development of the web services. They do not currently cater for this-->
+      <Discount xmlns="CatalogueSolutions.RSWeb.Model">0.0000</Discount>
+      <PreferredLanguage xmlns="CatalogueSolutions.RSWeb.Model">en-GB</PreferredLanguage>
+      <!--preferred user currency applicable only to sites with multiple currencies-->
+      <PreferredCurrency xmlns="CatalogueSolutions.RSWeb.Model">
+        <Id></Id>
+        <Name/>
+        <ShortName/>
+        <Symbol/>
+        <ROE></ROE>
+        <SymbolAfterPrice></SymbolAfterPrice>
+        <Precision></Precision>
+        <PrecisionTotals></PrecisionTotals>
+      </PreferredCurrency>
+      <DateModified xmlns="CatalogueSolutions.RSWeb.Model"></DateModified>
+    </Customer>
+  </listModelCustomer>
+  <!--result that can be used that fetched data has not been tampered with during transfer. if needed, distributor will be issued a secret key in this regard-->
+  <hashResult></hashResult>
+  <!--an indicatation as to whether the data used in the web service request was valid or not-->
+  <requestValid>true</requestValid>
+  <authenticationSucceeded>true</authenticationSucceeded>
+</CustomerResponse>

@@ -1,0 +1,18 @@
+VPN
+Kullanıcı adı 	: romsis
+Şifre 		: mbsan1453
+
+
+Server
+Kullanıcı Adı	: WIN-JDHPC3GMSCG\Administrator
+IP Adress	: 78.188.59.136
+Sql Server	: 192.168.2.222
+Pass		: Sql20!25@
+
+Cihaz Anydesk				Cihaz Yazıcı IP
+514256639 OrganiKasap	
+456613262 Giriş Askılı Tartı		192.168.2.141
+497843370 Giriş Kat Pişirme		192.168.2.60
+
+356867302 Aşağıkat orta alan		192.168.2.61
+369309971 Aşağıkat duvara takılan	192.168.2.89

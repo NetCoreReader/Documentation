@@ -1,0 +1,148 @@
+<OrderResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://apis.rscore.cataloguesolutions.com/">
+  <listOrders>
+    <Order>
+      <Properties xmlns="CatalogueSolutions.RSWeb.BLL">
+        <Id xmlns="CatalogueSolutions.RSWeb.Model">7449</Id>
+        <CustomerId xmlns="CatalogueSolutions.RSWeb.Model">39249</CustomerId>
+        <OrderLines xmlns="CatalogueSolutions.RSWeb.Model">
+          <OrderLine>
+            <Id>20935</Id>
+            <StockCode>2622006</StockCode>
+            <Quantity>2</Quantity>
+            <OrderId>7449</OrderId>
+            <Price>9.280</Price>
+            <Product>
+              <StockCode>2622006</StockCode>
+              <DashedStockCode>262-2006</DashedStockCode>
+              <SubRangeId>13127</SubRangeId>
+              <FamilyId>11751</FamilyId>
+              <ManufacturerName>Multi Contact</ManufacturerName>
+              <ManufacturerLogoId>-1</ManufacturerLogoId>
+              <ManufacturerPartNumber>23.0060-22</ManufacturerPartNumber>
+              <ShortDescription>Silver plated red lantern socket,2mm</ShortDescription>
+              <SSM>2</SSM>
+              <UnitOfMeasure>PK</UnitOfMeasure>
+              <Discontinued>false</Discontinued>
+              <Assets/>
+              <Attributes/>
+              <ProductType>CoreProduct</ProductType>
+              <RelatedProducts/>
+              <RoHs>Compliant</RoHs>
+              <Container>Each (In a Pack of 2)</Container>
+              <DataSheets/>
+              <Stock>2118</Stock>
+              <APC>Z1</APC>
+              <ContainerDescription/>
+              <IsNew>false</IsNew>
+              <ProductionPackagingStockCode/>
+              <PrimaryImage/>
+              <IsBhc>false</IsBhc>
+              <IsHazardous>false</IsHazardous>
+              <Tags/>
+              <IsRestricted>false</IsRestricted>
+              <HazardousEnv>false</HazardousEnv>
+              <HazardousShipping>false</HazardousShipping>
+              <ExportLicense>false</ExportLicense>
+              <HazardousLithium>false</HazardousLithium>
+            </Product>
+            <OriginalPrice>9.280</OriginalPrice>
+            <Discount>0.000</Discount>
+          </OrderLine>
+        </OrderLines>
+        <DeliveryAddressId xmlns="CatalogueSolutions.RSWeb.Model">41219</DeliveryAddressId>
+        <InvoiceAddressId xmlns="CatalogueSolutions.RSWeb.Model">41219</InvoiceAddressId>
+        <OrderRef xmlns="CatalogueSolutions.RSWeb.Model">te</OrderRef>
+        <OrderName xmlns="CatalogueSolutions.RSWeb.Model">te</OrderName>
+        <DateCreated xmlns="CatalogueSolutions.RSWeb.Model">2014-01-24T00:16:47.42</DateCreated>
+        <RecipientName xmlns="CatalogueSolutions.RSWeb.Model">te</RecipientName>
+        <RecipientTel xmlns="CatalogueSolutions.RSWeb.Model">te</RecipientTel>
+        <Currency xmlns="CatalogueSolutions.RSWeb.Model">
+          <Id>1</Id>
+          <Name>Euro</Name>
+          <ShortName>EUR</ShortName>
+          <Symbol>€</Symbol>
+          <ROE>1.0000</ROE>
+          <SymbolAfterPrice>false</SymbolAfterPrice>
+          <Precision>3</Precision>
+          <PrecisionTotals>2</PrecisionTotals>
+        </Currency>
+        <DeliveryAddress xmlns="CatalogueSolutions.RSWeb.Model">
+          <Company>ere</Company>
+          <Department/>
+          <Address1>1</Address1>
+          <Address2>5</Address2>
+          <Address3>1</Address3>
+          <Address4/>
+          <Country>Malta</Country>
+          <Address5/>
+          <Address6/>
+          <Id>41219</Id>
+          <CustomerId>39249</CustomerId>
+          <VatNo>VAT</VatNo>
+          <IsDefault>true</IsDefault>
+        </DeliveryAddress>
+        <InvoiceAddress xmlns="CatalogueSolutions.RSWeb.Model">
+          <Company>ere</Company>
+          <Department/>
+          <Address1>1</Address1>
+          <Address2>5</Address2>
+          <Address3>1</Address3>
+          <Address4/>
+          <Country>Malta</Country>
+          <Address5/>
+          <Address6/>
+          <Id>41219</Id>
+          <CustomerId>39249</CustomerId>
+          <VatNo>VAT</VatNo>
+          <IsDefault>true</IsDefault>
+        </InvoiceAddress>
+        <Charges xmlns="CatalogueSolutions.RSWeb.Model">
+          <Charge>
+            <Id>0</Id>
+            <Name>VAT</Name>
+            <Value>1.6700</Value>
+            <FixedCharge>0</FixedCharge>
+            <Percentage>0</Percentage>
+            <IsFixedCharge>false</IsFixedCharge>
+            <IsDeliveryMethod>false</IsDeliveryMethod>
+            <MinValue>0</MinValue>
+            <MaxValue>0</MaxValue>
+            <DisplayPriority>0</DisplayPriority>
+            <Enabled>false</Enabled>
+            <IsChargeOverridden>false</IsChargeOverridden>
+            <SiteId>0</SiteId>
+            <PaymentMethodId>0</PaymentMethodId>
+            <Group/>
+            <ExtraInfoText/>
+            <ProductTypes/>
+          </Charge>
+        </Charges>
+        <RsId xmlns="CatalogueSolutions.RSWeb.Model">9208570</RsId>
+        <DeliveryMethod xmlns="CatalogueSolutions.RSWeb.Model">
+          <Id>61</Id>
+          <Name>
+            Collection from RS Sales office (next day) - Order by 11am!
+          </Name>
+          <Value>0.0000</Value>
+          <CourierNumber/>
+          <CourierName/>
+          <CourierAddress/>
+          <ExtraInfoText/>
+        </DeliveryMethod>
+        <PaymentMethod xmlns="CatalogueSolutions.RSWeb.Model">
+          <Id>75</Id>
+          <Name>Credit Card</Name>
+          <PaymentCharge>0</PaymentCharge>
+          <AccountNumber/>
+        </PaymentMethod>
+        <PromoCode xmlns="CatalogueSolutions.RSWeb.Model"/>
+        <TotalDiscount xmlns="CatalogueSolutions.RSWeb.Model">0.0000</TotalDiscount>
+        <Total xmlns="CatalogueSolutions.RSWeb.Model">10.9500</Total>
+        <NoOfWeeksDue xmlns="CatalogueSolutions.RSWeb.Model">0</NoOfWeeksDue>
+      </Properties>
+    </Order>
+  </listOrders>
+  <hashResult>1840fa2a75c1abc55c8f6745cb79a3df</hashResult>
+  <requestValid>true</requestValid>
+  <authenticationSucceeded>true</authenticationSucceeded>
+</OrderResponse>

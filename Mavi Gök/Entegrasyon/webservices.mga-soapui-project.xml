@@ -1,0 +1,2966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="191ae95b-9f41-4aac-b666-63813df3a6d3" activeEnvironment="Default" name="webservices.mga" resourceRoot="${projectDir}" soapui-version="5.9.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="97ef4eb1-7299-49ae-a191-ab1b84506692" wsaVersion="NONE" name="BasicHttpBinding_IAIMSWebService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IAIMSWebService" soapVersion="1_1" anonymous="optional" definition="https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl"><con:part><con:url>https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl</con:url><con:content><![CDATA[<wsdl:definitions name="api_x002F_soap_x002F_aimswebservice" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+      <xs:element name="FetchCountries">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCountriesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchCountriesResult" nillable="true" type="q1:AIMSCountriesList" xmlns:q1="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchAirports">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchAirportsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchAirportsResult" nillable="true" type="q2:AimsAirportList" xmlns:q2="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchACType">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchACTypeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchACTypeResult" nillable="true" type="q3:AIMSActypeList" xmlns:q3="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchAircraft">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchAircraftResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchAircraftResult" nillable="true" type="q4:AIMSAircraftList" xmlns:q4="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCharterers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCharterersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchCharterersResult" nillable="true" type="q5:AIMSChartList" xmlns:q5="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrewMaxFDP">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightNo" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Dep" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrewMaxFDPResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchCrewMaxFDPResult" nillable="true" type="q6:TAIMSGetCrewMaxFDP" xmlns:q6="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchAircraftRouteDataAndSectors">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYYYY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchAircraftRouteDataAndSectorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchAircraftRouteDataAndSectorsResult" nillable="true" type="q7:RouteAndSectorList" xmlns:q7="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrMembers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Croute" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrMembersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchCrMembersResult" nillable="true" type="q8:GetCrewMember" xmlns:q8="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchLegMembers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Flight" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DEP" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchLegMembersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchLegMembersResult" nillable="true" type="q9:GetLegMembers" xmlns:q9="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchLegMembersPerDay">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchLegMembersPerDayResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchLegMembersPerDayResult" nillable="true" type="q10:GetLegMembersPerDay" xmlns:q10="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchLegMembersForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromHHrs" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMMin" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToHHrs" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMMin" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchLegMembersForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchLegMembersForPeriodResult" nillable="true" type="q11:GetLegMembersPerPeriod" xmlns:q11="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PM" nillable="true" type="q12:FlightParams" xmlns:q12="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FlightDetailsResult" nillable="true" type="q13:TAIMSFLightsList" xmlns:q13="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsForFlightLegOnDay">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsForFlightLegOnDayResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FlightDetailsForFlightLegOnDayResult" nillable="true" type="q14:TAIMSFLightsList" xmlns:q14="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMMonth" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromHH" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMMin" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMMonth" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToHH" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMMin" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FlightDetailsForPeriodResult" nillable="true" type="q15:TAIMSFLightsList" xmlns:q15="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsX1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PM" nillable="true" type="q16:FlightParams" xmlns:q16="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightDetailsX1Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FlightDetailsX1Result" nillable="true" type="q17:TAIMSFLightsListX1" xmlns:q17="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewMemberRosterDetailsForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" type="xs:int"/>
+            <xs:element minOccurs="0" name="FmDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewMemberRosterDetailsForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CrewMemberRosterDetailsForPeriodResult" nillable="true" type="q18:CrewMemberRosterDetailsForPeriodd" xmlns:q18="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewMisssingTrnIndicatorsForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewMisssingTrnIndicatorsForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CrewMisssingTrnIndicatorsForPeriodResult" nillable="true" type="q19:CrewMisssingTrnIndicatorsForPeriodd" xmlns:q19="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewPendingNotifForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewPendingNotifForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CrewPendingNotifForPeriodResult" nillable="true" type="q20:CrewPendingNotifForPeriodf" xmlns:q20="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrewMessages">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" type="xs:int"/>
+            <xs:element minOccurs="0" name="DictKey" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrewMessagesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchCrewMessagesResult" nillable="true" type="q21:FetchCrewMessagesf" xmlns:q21="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrewQuals">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="CrewID" type="xs:int"/>
+            <xs:element minOccurs="0" name="PrimaryQualify" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="GetAllQualsInPeriod" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCrewQualsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FetchCrewQualsResult" nillable="true" type="q22:FetchCrewQualsf" xmlns:q22="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewCheckIn">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" type="xs:int"/>
+            <xs:element minOccurs="0" name="Confirmed" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewCheckInResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CrewCheckInResult" nillable="true" type="q23:TAIMSCrewCheckIn" xmlns:q23="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewCheckOut">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" type="xs:int"/>
+            <xs:element minOccurs="0" name="Confirmed" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewCheckOutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CrewCheckOutResult" nillable="true" type="q24:TAIMSCrewCheckOut" xmlns:q24="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCrewList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" type="xs:int"/>
+            <xs:element minOccurs="0" name="PrimaryQualify" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="FmDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FmYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="BaseStr" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ACStr" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PosStr" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCrewListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetCrewListResult" nillable="true" type="q25:GetCrewListf" xmlns:q25="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewScheduleChangesForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="TOMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="TOYYYY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CrewScheduleChangesForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CrewScheduleChangesForPeriodResult" nillable="true" type="q26:CrewScheduleChangesForPeriodf" xmlns:q26="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnfinalizedCrewRoutesForDay">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnfinalizedCrewRoutesForDayResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UnfinalizedCrewRoutesForDayResult" nillable="true" type="q27:TAIMSUnfinCrewRoutesList" xmlns:q27="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightScheduleModificationLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForBegDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForBegMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForBegYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForEndDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForEndMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForEndYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnBegDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnBegMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnBegYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnBegHHrs" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnBegMMin" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnEndDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnEndMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnEndYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnEndHHrs" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnEndMMin" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightScheduleModificationLogResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FlightScheduleModificationLogResult" nillable="true" type="q28:FltSchedModificationLog" xmlns:q28="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GreenwichMeanTimeDifferenceInMins">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="onBase" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="onYear" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="onMonth" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="onDate" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="onHours" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="onMins" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="TypeOfTime" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GreenwichMeanTimeDifferenceInMinsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GreenwichMeanTimeDifferenceInMinsResult" nillable="true" type="q29:GreenwichMeanTimeDifferenceInMinsf" xmlns:q29="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertCrewMember">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="CrewInfo" nillable="true" type="q30:TAIMSCrewInfo" xmlns:q30="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertCrewMemberResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InsertCrewMemberResult" nillable="true" type="q31:InsertMemb" xmlns:q31="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertCrewMember2">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="CrewInfo" nillable="true" type="q32:TAIMSCrewInfo2" xmlns:q32="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InsertCrewMember2Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InsertCrewMember2Result" nillable="true" type="q33:InsertMemb2" xmlns:q33="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateLegInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightDay" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightMonth" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightYear" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightCarrier" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightNum" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FlightLegCd" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DepStand" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ArrStand" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="DepGate" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ArrGate" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateLegInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UpdateLegInfoResult" nillable="true" type="q34:UpdateLegInf" xmlns:q34="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateVRData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="aimsvrdata" nillable="true" type="q35:TAIMSVRData" xmlns:q35="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateVRDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UpdateVRDataResult" nillable="true" type="q36:UpdateVRDataresp" xmlns:q36="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveCrewNotificationIndicator">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ForYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnMM" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnTimeMins" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="OnTimeMSecs" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveCrewNotificationIndicatorResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RemoveCrewNotificationIndicatorResult" nillable="true" type="q37:RemoveNotifIndicator" xmlns:q37="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightScheduleChangesForPeriod">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMMonth" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromHH" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="FromMMin" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMMonth" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToYYYY" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToHH" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ToMMin" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FlightScheduleChangesForPeriodResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FlightScheduleChangesForPeriodResult" nillable="true" type="q38:FlightScheduleLogDetails" xmlns:q38="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeAcRegToRoute">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="AcReg" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="ScenDb" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="flight" nillable="true" type="q39:TFlightKey" xmlns:q39="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+            <xs:element minOccurs="0" name="FirstLegOnly" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeAcRegToRouteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ChangeAcRegToRouteResult" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMtceEvents">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UN" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="PSW" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="Events" nillable="true" type="q40:ArrayOfTAIMSMtceEvent" xmlns:q40="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService"/>
+            <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMtceEventsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UpdateMtceEventsResult" type="xs:boolean"/>
+            <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/AIMS.Data.AimsWebService">
+      <xs:complexType name="AIMSCountriesList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="cCountryList" nillable="true" type="tns:ArrayOfTAIMSCountry"/>
+          <xs:element minOccurs="0" name="cErrorExplanation" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AIMSCountriesList" nillable="true" type="tns:AIMSCountriesList"/>
+      <xs:complexType name="ArrayOfTAIMSCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCountry" nillable="true" type="tns:TAIMSCountry"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCountry" nillable="true" type="tns:ArrayOfTAIMSCountry"/>
+      <xs:complexType name="TAIMSCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cCountryCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cCountryName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCountry" nillable="true" type="tns:TAIMSCountry"/>
+      <xs:complexType name="AimsAirportList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cAIMSAirportList" nillable="true" type="tns:ArrayOfTAIMSAirport"/>
+          <xs:element minOccurs="0" name="cCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="cErrorExplanation" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AimsAirportList" nillable="true" type="tns:AimsAirportList"/>
+      <xs:complexType name="ArrayOfTAIMSAirport">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSAirport" nillable="true" type="tns:TAIMSAirport"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSAirport" nillable="true" type="tns:ArrayOfTAIMSAirport"/>
+      <xs:complexType name="TAIMSAirport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cAirportCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cAirportName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cAltitude" type="xs:int"/>
+          <xs:element minOccurs="0" name="cCKNotEFB" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="cCountryCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cHeadInfo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cHeilideckHeight" type="xs:double"/>
+          <xs:element minOccurs="0" name="cIsPossibleDiversionBit" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="cIsPossibleFuelLocation" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="cLatitude" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cLocationType" type="xs:int"/>
+          <xs:element minOccurs="0" name="cLongtitude" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cMagneticVariation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cRunwayLength" type="xs:int"/>
+          <xs:element minOccurs="0" name="cTAXI_ARR" type="xs:short"/>
+          <xs:element minOccurs="0" name="cTAXI_DEP" type="xs:short"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSAirport" nillable="true" type="tns:TAIMSAirport"/>
+      <xs:complexType name="AIMSActypeList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cAIMSACTypeList" nillable="true" type="tns:ArrayOfTAIMSACType"/>
+          <xs:element minOccurs="0" name="cCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="cErrorExplanation" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AIMSActypeList" nillable="true" type="tns:AIMSActypeList"/>
+      <xs:complexType name="ArrayOfTAIMSACType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSACType" nillable="true" type="tns:TAIMSACType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSACType" nillable="true" type="tns:ArrayOfTAIMSACType"/>
+      <xs:complexType name="TAIMSACType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cACTypeCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cCHCDescription" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cDescription" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSACType" nillable="true" type="tns:TAIMSACType"/>
+      <xs:complexType name="AIMSAircraftList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cAIMSAircraftList" nillable="true" type="tns:ArrayOfTAIMSAircraft"/>
+          <xs:element minOccurs="0" name="cCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="cErrorExplanation" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AIMSAircraftList" nillable="true" type="tns:AIMSAircraftList"/>
+      <xs:complexType name="ArrayOfTAIMSAircraft">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSAircraft" nillable="true" type="tns:TAIMSAircraft"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSAircraft" nillable="true" type="tns:ArrayOfTAIMSAircraft"/>
+      <xs:complexType name="TAIMSAircraft">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cACCountry" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cACReg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cACSerialNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cACType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="cACUsePound" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSAircraft" nillable="true" type="tns:TAIMSAircraft"/>
+      <xs:complexType name="AIMSChartList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Errorexplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TAIMSchartReclist" nillable="true" type="tns:ArrayOfTAIMSchartRec"/>
+          <xs:element minOccurs="0" name="rCount" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AIMSChartList" nillable="true" type="tns:AIMSChartList"/>
+      <xs:complexType name="ArrayOfTAIMSchartRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSchartRec" nillable="true" type="tns:TAIMSchartRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSchartRec" nillable="true" type="tns:ArrayOfTAIMSchartRec"/>
+      <xs:complexType name="TAIMSchartRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CHARTERERCODE" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CHARTERERDESCRIPTION" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSchartRec" nillable="true" type="tns:TAIMSchartRec"/>
+      <xs:complexType name="TAIMSGetCrewMaxFDP">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDesc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightLegCD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightMM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightYY" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TAIMSGetCrewMaxFDP" nillable="true" type="tns:ArrayOfCrewMaxFDP"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSGetCrewMaxFDP" nillable="true" type="tns:TAIMSGetCrewMaxFDP"/>
+      <xs:complexType name="ArrayOfCrewMaxFDP">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CrewMaxFDP" nillable="true" type="tns:CrewMaxFDP"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCrewMaxFDP" nillable="true" type="tns:ArrayOfCrewMaxFDP"/>
+      <xs:complexType name="CrewMaxFDP">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CRouteDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewRoute" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FDPEnd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FDPStart" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MaxFDP" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Rank" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="StaffNum" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CrewMaxFDP" nillable="true" type="tns:CrewMaxFDP"/>
+      <xs:complexType name="RouteAndSectorList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AIMSARouteList" nillable="true" type="tns:ArrayOfTAIMSARoute"/>
+          <xs:element minOccurs="0" name="Count" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RouteAndSectorList" nillable="true" type="tns:RouteAndSectorList"/>
+      <xs:complexType name="ArrayOfTAIMSARoute">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSARoute" nillable="true" type="tns:TAIMSARoute"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSARoute" nillable="true" type="tns:ArrayOfTAIMSARoute"/>
+      <xs:complexType name="TAIMSARoute">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ADate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AIMSSectorlist" nillable="true" type="tns:ArrayOfTAIMSSector"/>
+          <xs:element minOccurs="0" name="ARoute" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ARouteADate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="AcSerialNumber" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSARoute" nillable="true" type="tns:TAIMSARoute"/>
+      <xs:complexType name="ArrayOfTAIMSSector">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSSector" nillable="true" type="tns:TAIMSSector"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSSector" nillable="true" type="tns:ArrayOfTAIMSSector"/>
+      <xs:complexType name="TAIMSSector">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewOnSectorList" nillable="true" type="tns:ArrayOfCrewOnSector"/>
+          <xs:element minOccurs="0" name="Dep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Operdate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="arouteadate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="arr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="arrdate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="carriercode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="charterercode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="fltno" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="legcd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="sta" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="std" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSSector" nillable="true" type="tns:TAIMSSector"/>
+      <xs:complexType name="ArrayOfCrewOnSector">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CrewOnSector" nillable="true" type="tns:CrewOnSector"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCrewOnSector" nillable="true" type="tns:ArrayOfCrewOnSector"/>
+      <xs:complexType name="CrewOnSector">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pos" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CrewOnSector" nillable="true" type="tns:CrewOnSector"/>
+      <xs:complexType name="GetCrewMember">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int"/>
+          <xs:element minOccurs="0" name="CrouteDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrouteMM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrouteYY" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FMember" nillable="true" type="tns:ArrayOfTAIMSMember"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetCrewMember" nillable="true" type="tns:GetCrewMember"/>
+      <xs:complexType name="ArrayOfTAIMSMember">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSMember" nillable="true" type="tns:TAIMSMember"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSMember" nillable="true" type="tns:ArrayOfTAIMSMember"/>
+      <xs:complexType name="TAIMSMember">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewlegOrder" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="FlightLegCd" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Flt" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PayrollNumber" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ac" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="altpos" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="base" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="crsday" type="xs:short"/>
+          <xs:element minOccurs="0" name="crsdaydd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="crsdaymm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="crsdayyy" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="crte" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="notif" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="pax" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="pos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="qualcat" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="request" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="shortName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="trnduty" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSMember" nillable="true" type="tns:TAIMSMember"/>
+      <xs:complexType name="GetLegMembers">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LegMembs" nillable="true" type="tns:ArrayOfTAIMSGetLegMembers"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetLegMembers" nillable="true" type="tns:GetLegMembers"/>
+      <xs:complexType name="ArrayOfTAIMSGetLegMembers">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSGetLegMembers" nillable="true" type="tns:TAIMSGetLegMembers"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSGetLegMembers" nillable="true" type="tns:ArrayOfTAIMSGetLegMembers"/>
+      <xs:complexType name="TAIMSGetLegMembers">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="FMember" nillable="true" type="tns:ArrayOfTAIMSMember"/>
+          <xs:element minOccurs="0" name="FlightArr" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="FlightCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDesc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightLegCD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightMM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNo" type="xs:int"/>
+          <xs:element minOccurs="0" name="FlightStatus" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="FlightYY" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="OrgDay" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PICID" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSGetLegMembers" nillable="true" type="tns:TAIMSGetLegMembers"/>
+      <xs:complexType name="GetLegMembersPerDay">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int"/>
+          <xs:element minOccurs="0" name="Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DayMember" nillable="true" type="tns:ArrayOfTAIMSGetLegMembers"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Month" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Year" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetLegMembersPerDay" nillable="true" type="tns:GetLegMembersPerDay"/>
+      <xs:complexType name="GetLegMembersPerPeriod">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int"/>
+          <xs:element minOccurs="0" name="DD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Day" type="xs:short"/>
+          <xs:element minOccurs="0" name="DayMember" nillable="true" type="tns:ArrayOfTAIMSGetLegMembers"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromHrs" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromMin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToHrs" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToMin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="YY" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetLegMembersPerPeriod" nillable="true" type="tns:GetLegMembersPerPeriod"/>
+      <xs:complexType name="FlightParams">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepArrMode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightACType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightArr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightLegCd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromHH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromMin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromMonth" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FromYYYY" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToHH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToMin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToMonth" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ToYYYY" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FlightParams" nillable="true" type="tns:FlightParams"/>
+      <xs:complexType name="TAIMSFLightsList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="FlightList" nillable="true" type="tns:ArrayOfTAIMSFlight"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSFLightsList" nillable="true" type="tns:TAIMSFLightsList"/>
+      <xs:complexType name="ArrayOfTAIMSFlight">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSFlight" nillable="true" type="tns:TAIMSFlight"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSFlight" nillable="true" type="tns:ArrayOfTAIMSFlight"/>
+      <xs:complexType name="TAIMSFlight">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ARCID" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="AROUTE" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="AircraftRouteDay" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ArrGate" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ArrStand" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="BlockAccess" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="DelayRemarks" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="DepGate" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="DepStand" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="DoorClose" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Flags" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="FlightAcType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightActualDayArr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightActualDayDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightArr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightArrDelays" nillable="true" type="tns:ArrayOfFlightDelay"/>
+          <xs:element minOccurs="0" name="FlightAssocCrwRtes" nillable="true" type="tns:ArrayOfAssosiatedCrewRouteInfo"/>
+          <xs:element minOccurs="0" name="FlightAta" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightAtd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightBlkTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDepDelays" nillable="true" type="tns:ArrayOfFlightDelay"/>
+          <xs:element minOccurs="0" name="FlightDesc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightEta" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightEtd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightLegCD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightMM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNo" type="xs:int"/>
+          <xs:element minOccurs="0" name="FlightNoOfPax" type="xs:int"/>
+          <xs:element minOccurs="0" name="FlightReg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightSta" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightStatus" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightStd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightTDOWN" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightTKOFF" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightYY" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ORG_DATE" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ORG_STA" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ORG_STD" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PaxPerCategory" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSFlight" nillable="true" type="tns:TAIMSFlight"/>
+      <xs:complexType name="ArrayOfFlightDelay">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightDelay" nillable="true" type="tns:FlightDelay"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfFlightDelay" nillable="true" type="tns:ArrayOfFlightDelay"/>
+      <xs:complexType name="FlightDelay">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FDelayCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FDelayTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SubDelayCode" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SubDelayCodeDescription" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FlightDelay" nillable="true" type="tns:FlightDelay"/>
+      <xs:complexType name="ArrayOfAssosiatedCrewRouteInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="AssosiatedCrewRouteInfo" nillable="true" type="tns:AssosiatedCrewRouteInfo"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfAssosiatedCrewRouteInfo" nillable="true" type="tns:ArrayOfAssosiatedCrewRouteInfo"/>
+      <xs:complexType name="AssosiatedCrewRouteInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RouteDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="RouteName" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AssosiatedCrewRouteInfo" nillable="true" type="tns:AssosiatedCrewRouteInfo"/>
+      <xs:complexType name="TAIMSFLightsListX1">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="FlightListX1" nillable="true" type="tns:ArrayOfTAIMSFlightX1"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSFLightsListX1" nillable="true" type="tns:TAIMSFLightsListX1"/>
+      <xs:complexType name="ArrayOfTAIMSFlightX1">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSFlightX1" nillable="true" type="tns:TAIMSFlightX1"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSFlightX1" nillable="true" type="tns:ArrayOfTAIMSFlightX1"/>
+      <xs:complexType name="TAIMSFlightX1">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:TAIMSFlight">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cancelled" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ETADay" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ETDday" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NextCarrier" type="xs:short"/>
+              <xs:element minOccurs="0" name="NextDEP" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NextDay" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NextFlt" type="xs:short"/>
+              <xs:element minOccurs="0" name="NextLegCd" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NextStd" type="xs:short"/>
+              <xs:element minOccurs="0" name="TaxiArr" type="xs:short"/>
+              <xs:element minOccurs="0" name="TaxiDep" type="xs:short"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="TAIMSFlightX1" nillable="true" type="tns:TAIMSFlightX1"/>
+      <xs:complexType name="CrewMemberRosterDetailsForPeriodd">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewRostCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TAIMSCrewRostDetailList" nillable="true" type="tns:ArrayOfTAIMSCrewRostItm"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CrewMemberRosterDetailsForPeriodd" nillable="true" type="tns:CrewMemberRosterDetailsForPeriodd"/>
+      <xs:complexType name="ArrayOfTAIMSCrewRostItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCrewRostItm" nillable="true" type="tns:TAIMSCrewRostItm"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCrewRostItm" nillable="true" type="tns:ArrayOfTAIMSCrewRostItm"/>
+      <xs:complexType name="TAIMSCrewRostItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ATA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATABase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATABaseDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATADay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATALocal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATALocalday" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATDBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATDBaseDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATDDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATDLocal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATDLocalDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Arr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CDATE" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CROUTE" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Dep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Flt" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDBEG" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDBEGBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDBEGBaseDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDBEGLocal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDBEGLocalDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDBEG_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDEND" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDENDBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDENDBaseDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDENDDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDENDLocal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GDENDLocalDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Legcd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PAX" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STABase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STABaseDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STADay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STALocal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STALocalDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STDBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STDBaseDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STDLocal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="STDLocalDay" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewRostItm" nillable="true" type="tns:TAIMSCrewRostItm"/>
+      <xs:complexType name="CrewMisssingTrnIndicatorsForPeriodd">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrwMissTrnIndCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="CrwMissTrnIndList" nillable="true" type="tns:ArrayOfTAIMSCrwMissTrnIndItem"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CrewMisssingTrnIndicatorsForPeriodd" nillable="true" type="tns:CrewMisssingTrnIndicatorsForPeriodd"/>
+      <xs:complexType name="ArrayOfTAIMSCrwMissTrnIndItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCrwMissTrnIndItem" nillable="true" type="tns:TAIMSCrwMissTrnIndItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCrwMissTrnIndItem" nillable="true" type="tns:ArrayOfTAIMSCrwMissTrnIndItem"/>
+      <xs:complexType name="TAIMSCrwMissTrnIndItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_AC" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_BASE" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_DD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_Date" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_ID" type="xs:int"/>
+          <xs:element minOccurs="0" name="MissTrnInd_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_NAME" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_POS" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MissTrnInd_YY" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrwMissTrnIndItem" nillable="true" type="tns:TAIMSCrwMissTrnIndItem"/>
+      <xs:complexType name="CrewPendingNotifForPeriodf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PendNotifCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="PendNotifList" nillable="true" type="tns:ArrayOfTAIMSCrewLogItm"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CrewPendingNotifForPeriodf" nillable="true" type="tns:CrewPendingNotifForPeriodf"/>
+      <xs:complexType name="ArrayOfTAIMSCrewLogItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCrewLogItm" nillable="true" type="tns:TAIMSCrewLogItm"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCrewLogItm" nillable="true" type="tns:ArrayOfTAIMSCrewLogItm"/>
+      <xs:complexType name="TAIMSCrewLogItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LogForDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogMessage" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogByUser" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogOnDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogOnTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogOnDayTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogCrewID" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewLogItm" nillable="true" type="tns:TAIMSCrewLogItm"/>
+      <xs:complexType name="FetchCrewMessagesf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MessageList" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FetchCrewMessagesf" nillable="true" type="tns:FetchCrewMessagesf"/>
+      <xs:complexType name="FetchCrewQualsf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewQualList" nillable="true" type="tns:ArrayOfTAIMSCrewQualsRec"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TotalCrew" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FetchCrewQualsf" nillable="true" type="tns:FetchCrewQualsf"/>
+      <xs:complexType name="ArrayOfTAIMSCrewQualsRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCrewQualsRec" nillable="true" type="tns:TAIMSCrewQualsRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCrewQualsRec" nillable="true" type="tns:ArrayOfTAIMSCrewQualsRec"/>
+      <xs:complexType name="TAIMSCrewQualsRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CellPhone" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Crew3LC" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewCategs" nillable="true" type="tns:ArrayOfCrewcategoryitem">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="CrewID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewQuals" nillable="true" type="tns:ArrayOfTAIMSCrewQualsItm"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EmployBeg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EmployEnd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EndReason" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="KinName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Mailbox" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Marital" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PayrollNm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Relation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Residence" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SecNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewQualsRec" nillable="true" type="tns:TAIMSCrewQualsRec"/>
+      <xs:complexType name="ArrayOfCrewcategoryitem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Crewcategoryitem" nillable="true" type="tns:Crewcategoryitem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCrewcategoryitem" nillable="true" type="tns:ArrayOfCrewcategoryitem"/>
+      <xs:complexType name="Crewcategoryitem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="crewcatindex" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="crewcategory" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Crewcategoryitem" nillable="true" type="tns:Crewcategoryitem"/>
+      <xs:complexType name="ArrayOfTAIMSCrewQualsItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCrewQualsItm" nillable="true" type="tns:TAIMSCrewQualsItm"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCrewQualsItm" nillable="true" type="tns:ArrayOfTAIMSCrewQualsItm"/>
+      <xs:complexType name="TAIMSCrewQualsItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NotToBeRoster" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="PrimaryQual" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="QualAc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualBDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualEDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualPos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="RosterGroup" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewQualsItm" nillable="true" type="tns:TAIMSCrewQualsItm"/>
+      <xs:complexType name="TAIMSCrewCheckIn">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ac" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Base" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ConfirmedGiven" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightArr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightSta" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightStd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Id" type="xs:int"/>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Status" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewCheckIn" nillable="true" type="tns:TAIMSCrewCheckIn"/>
+      <xs:complexType name="TAIMSCrewCheckOut">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Ac" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Base" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Confirmed" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightArr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightSta" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightStd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Id" type="xs:int"/>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Pos" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Status" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewCheckOut" nillable="true" type="tns:TAIMSCrewCheckOut"/>
+      <xs:complexType name="GetCrewListf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewList" nillable="true" type="tns:ArrayOfTAIMSGetCrewItm"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="GetCrewListCount" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetCrewListf" nillable="true" type="tns:GetCrewListf"/>
+      <xs:complexType name="ArrayOfTAIMSGetCrewItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSGetCrewItm" nillable="true" type="tns:TAIMSGetCrewItm"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSGetCrewItm" nillable="true" type="tns:ArrayOfTAIMSGetCrewItm"/>
+      <xs:complexType name="TAIMSGetCrewItm">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactCell" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactCell2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactCell3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactCoMob" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactCoMob2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactCoMob3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactTel" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactTel2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactTel3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EmploymentDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IssueDate" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Language1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Language2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LicenseNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Marital" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NationalityCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NextKinContact" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NextKinName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NextKinRelsn" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Passpname" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PassportCountry" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PassportExpiryDate" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Quals" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnderTrain" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="qualcat" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSGetCrewItm" nillable="true" type="tns:TAIMSGetCrewItm"/>
+      <xs:complexType name="CrewScheduleChangesForPeriodf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewLogList" nillable="true" type="tns:ArrayOfTAIMSCrewLogItm"/>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogCounter" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CrewScheduleChangesForPeriodf" nillable="true" type="tns:CrewScheduleChangesForPeriodf"/>
+      <xs:complexType name="TAIMSUnfinCrewRoutesList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnfinRteCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="UnfinRteList" nillable="true" type="tns:ArrayOfTAIMSUnfinRteItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSUnfinCrewRoutesList" nillable="true" type="tns:TAIMSUnfinCrewRoutesList"/>
+      <xs:complexType name="ArrayOfTAIMSUnfinRteItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSUnfinRteItem" nillable="true" type="tns:TAIMSUnfinRteItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSUnfinRteItem" nillable="true" type="tns:ArrayOfTAIMSUnfinRteItem"/>
+      <xs:complexType name="TAIMSUnfinRteItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnFinDD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnFinDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnFinMM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnFinRoute" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UnFinYY" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSUnfinRteItem" nillable="true" type="tns:TAIMSUnfinRteItem"/>
+      <xs:complexType name="FltSchedModificationLog">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLogCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="FltsSchedModificationList" nillable="true" type="tns:ArrayOfTAimsFltsSchedModLogItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FltSchedModificationLog" nillable="true" type="tns:FltSchedModificationLog"/>
+      <xs:complexType name="ArrayOfTAimsFltsSchedModLogItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAimsFltsSchedModLogItem" nillable="true" type="tns:TAimsFltsSchedModLogItem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAimsFltsSchedModLogItem" nillable="true" type="tns:ArrayOfTAimsFltsSchedModLogItem"/>
+      <xs:complexType name="TAimsFltsSchedModLogItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FltsSchedModLog_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_Flt" type="xs:int"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_Dep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_Arr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_Carrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LegCd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_STD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_STA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ETD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ETA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ATD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ATA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_TOFF" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_TDWN" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_STD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_STA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ETD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ETA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ATD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ATA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_TOFF" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_TDWN" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_Status" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_FlightType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_NoOfPax" type="xs:int"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ExpPassngr" type="xs:int"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyCode1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyTime1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyCode2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyTime2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyCode3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyTime3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyCode4" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DlyTime4" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ArrDlyCode1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ArrDlyTime1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ArrDlyCode2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ArrDlyTime2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DepGate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ArrGate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_DepStand" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_ArrStand" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_AcType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_AcOwner" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_AcReg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_OnDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_OnTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_STD_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_STA_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ETD_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ETA_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ATD_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_ATA_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_TOFF_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_UTC_TDWN_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_STD_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_STA_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ETD_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ETA_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ATD_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_ATA_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_TOFF_Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FltsSchedModLog_LOCSTN_TDWN_Day" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAimsFltsSchedModLogItem" nillable="true" type="tns:TAimsFltsSchedModLogItem"/>
+      <xs:complexType name="GreenwichMeanTimeDifferenceInMinsf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="result" type="xs:short"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GreenwichMeanTimeDifferenceInMinsf" nillable="true" type="tns:GreenwichMeanTimeDifferenceInMinsf"/>
+      <xs:complexType name="TAIMSCrewInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CellPhone" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Crew3LC" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EmployBeg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EmployEnd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EndReason" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="KinName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MailBox" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Marital" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PayrollNm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualItems" nillable="true" type="tns:ArrayOfTAIMSQualRec"/>
+          <xs:element minOccurs="0" name="Relation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Residence" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SecNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewInfo" nillable="true" type="tns:TAIMSCrewInfo"/>
+      <xs:complexType name="ArrayOfTAIMSQualRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSQualRec" nillable="true" type="tns:TAIMSQualRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSQualRec" nillable="true" type="tns:ArrayOfTAIMSQualRec"/>
+      <xs:complexType name="TAIMSQualRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="QualAc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualBDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualEDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualPos" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSQualRec" nillable="true" type="tns:TAIMSQualRec"/>
+      <xs:complexType name="InsertMemb">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IsMemberInserted" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="InsertMemb" nillable="true" type="tns:InsertMemb"/>
+      <xs:complexType name="TAIMSCrewInfo2">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EmployBeg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ExemptSBY" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="EntitlementCategoryList" nillable="true" type="tns:ArrayOfentitlementitem"/>
+          <xs:element minOccurs="0" name="UnderTrain" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="CrewCategs" nillable="true" type="tns:ArrayOfTAIMSCrwCtgsItems"/>
+          <xs:element minOccurs="0" name="CrewQuals" nillable="true" type="tns:ArrayOfTAIMSQualsItems2"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrewInfo2" nillable="true" type="tns:TAIMSCrewInfo2"/>
+      <xs:complexType name="ArrayOfentitlementitem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="entitlementitem" nillable="true" type="tns:entitlementitem"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfentitlementitem" nillable="true" type="tns:ArrayOfentitlementitem"/>
+      <xs:complexType name="entitlementitem">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:element name="entitlementitem" nillable="true" type="tns:entitlementitem"/>
+      <xs:complexType name="ArrayOfTAIMSCrwCtgsItems">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSCrwCtgsItems" nillable="true" type="tns:TAIMSCrwCtgsItems"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSCrwCtgsItems" nillable="true" type="tns:ArrayOfTAIMSCrwCtgsItems"/>
+      <xs:complexType name="TAIMSCrwCtgsItems">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CrewCatIdx" type="xs:short"/>
+          <xs:element minOccurs="0" name="CrewCatBDate" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CrewCatEDate" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSCrwCtgsItems" nillable="true" type="tns:TAIMSCrwCtgsItems"/>
+      <xs:complexType name="ArrayOfTAIMSQualsItems2">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSQualsItems2" nillable="true" type="tns:TAIMSQualsItems2"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSQualsItems2" nillable="true" type="tns:ArrayOfTAIMSQualsItems2"/>
+      <xs:complexType name="TAIMSQualsItems2">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NotToBeRoster" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="PrimaryQual" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="QualAc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualBDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualEDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="QualPos" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSQualsItems2" nillable="true" type="tns:TAIMSQualsItems2"/>
+      <xs:complexType name="InsertMemb2">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IsMemberInserted" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="InsertMemb2" nillable="true" type="tns:InsertMemb2"/>
+      <xs:complexType name="UpdateLegInf">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IsUpdated" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UpdateLegInf" nillable="true" type="tns:UpdateLegInf"/>
+      <xs:complexType name="TAIMSVRData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FlightDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightMonth" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightYear" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightLegCd" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EstimDepDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EstimDepMonth" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="EstimDepYear" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActualTimes" nillable="true" type="tns:TAIMSActualTimesRec"/>
+          <xs:element minOccurs="0" name="DelayTimes" nillable="true" type="tns:TAIMSDelayTimesRec"/>
+          <xs:element minOccurs="0" name="TAIMSLandsTkofItems" nillable="true" type="tns:ArrayOfTAIMSLandsTkofRec"/>
+          <xs:element minOccurs="0" name="FacilitiesItems" nillable="true" type="tns:ArrayOfTAIMSFacilitiesRec"/>
+          <xs:element minOccurs="0" name="PasengersItems" nillable="true" type="tns:ArrayOfTAIMSPasengersRec"/>
+          <xs:element minOccurs="0" name="FuelItems" nillable="true" type="tns:ArrayOfTAIMSFuelCargoRec"/>
+          <xs:element minOccurs="0" name="CargoItems" nillable="true" type="tns:ArrayOfTAIMSFuelCargoRec"/>
+          <xs:element minOccurs="0" name="SupplierItems" nillable="true" type="tns:ArrayOfTAIMSSupplierRec"/>
+          <xs:element minOccurs="0" name="AdditionalInfo" nillable="true" type="tns:TAIMSAdditionalInfo"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSVRData" nillable="true" type="tns:TAIMSVRData"/>
+      <xs:complexType name="TAIMSActualTimesRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ATA_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATA_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATD_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ATD_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TDOWN_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TDOWN_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TKOF_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TKOF_MM" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSActualTimesRec" nillable="true" type="tns:TAIMSActualTimesRec"/>
+      <xs:complexType name="TAIMSDelayTimesRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepDelayTime1_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime1_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayCode1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime2_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime2_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayCode2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime3_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime3_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayCode3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime4_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayTime4_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelayCode4" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelayTime1_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelayTime1_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelayCode1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelayTime2_HH" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelayTime2_MM" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelayCode2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelaySubCode1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelaySubCode2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelaySubCode3" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DepDelaySubCode4" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelaySubCode1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ArrDelaySubCode2" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSDelayTimesRec" nillable="true" type="tns:TAIMSDelayTimesRec"/>
+      <xs:complexType name="ArrayOfTAIMSLandsTkofRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSLandsTkofRec" nillable="true" type="tns:TAIMSLandsTkofRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSLandsTkofRec" nillable="true" type="tns:ArrayOfTAIMSLandsTkofRec"/>
+      <xs:complexType name="TAIMSLandsTkofRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TKFLND_ID" type="xs:int"/>
+          <xs:element minOccurs="0" name="TKOF_DAY" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="TKOF_NIGHT" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="TKOF_MAN" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="TKOF_AUTO" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="LAND_DAY" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="LAND_NIGHT" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="LAND_MAN" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="LAND_AUTO" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="CAT3_ACT" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="CAT3_PRAC" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="RHS" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSLandsTkofRec" nillable="true" type="tns:TAIMSLandsTkofRec"/>
+      <xs:complexType name="ArrayOfTAIMSFacilitiesRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSFacilitiesRec" nillable="true" type="tns:TAIMSFacilitiesRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSFacilitiesRec" nillable="true" type="tns:ArrayOfTAIMSFacilitiesRec"/>
+      <xs:complexType name="TAIMSFacilitiesRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FacilDesc" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FacilAmount" nillable="true" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSFacilitiesRec" nillable="true" type="tns:TAIMSFacilitiesRec"/>
+      <xs:complexType name="ArrayOfTAIMSPasengersRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSPasengersRec" nillable="true" type="tns:TAIMSPasengersRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSPasengersRec" nillable="true" type="tns:ArrayOfTAIMSPasengersRec"/>
+      <xs:complexType name="TAIMSPasengersRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PasngrCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PasngrNum" nillable="true" type="xs:short"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSPasengersRec" nillable="true" type="tns:TAIMSPasengersRec"/>
+      <xs:complexType name="ArrayOfTAIMSFuelCargoRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSFuelCargoRec" nillable="true" type="tns:TAIMSFuelCargoRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSFuelCargoRec" nillable="true" type="tns:ArrayOfTAIMSFuelCargoRec"/>
+      <xs:complexType name="TAIMSFuelCargoRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FieldDescr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MeasureUnit" type="xs:unsignedByte"/>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSFuelCargoRec" nillable="true" type="tns:TAIMSFuelCargoRec"/>
+      <xs:complexType name="ArrayOfTAIMSSupplierRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSSupplierRec" nillable="true" type="tns:TAIMSSupplierRec"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSSupplierRec" nillable="true" type="tns:ArrayOfTAIMSSupplierRec"/>
+      <xs:complexType name="TAIMSSupplierRec">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Supl_AgentCompany" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Supl_SlipNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Supl_Value" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSSupplierRec" nillable="true" type="tns:TAIMSSupplierRec"/>
+      <xs:complexType name="TAIMSAdditionalInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExtraFld1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ExtraFld2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSAdditionalInfo" nillable="true" type="tns:TAIMSAdditionalInfo"/>
+      <xs:complexType name="UpdateVRDataresp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IsUpdated" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="UpdateVRDataresp" nillable="true" type="tns:UpdateVRDataresp"/>
+      <xs:complexType name="RemoveNotifIndicator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="IndicatorRemoved" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RemoveNotifIndicator" nillable="true" type="tns:RemoveNotifIndicator"/>
+      <xs:complexType name="FlightScheduleLogDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorExplanation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FlightLegsChangedlist" nillable="true" type="tns:ArrayOfLegLogChanges"/>
+          <xs:element minOccurs="0" name="FlightLegsCount" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FlightScheduleLogDetails" nillable="true" type="tns:FlightScheduleLogDetails"/>
+      <xs:complexType name="ArrayOfLegLogChanges">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="LegLogChanges" nillable="true" type="tns:LegLogChanges"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfLegLogChanges" nillable="true" type="tns:ArrayOfLegLogChanges"/>
+      <xs:complexType name="LegLogChanges">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LegLogChangesCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="LegLogDetailslist" nillable="true" type="tns:ArrayOfLegLogDetails"/>
+          <xs:element minOccurs="0" name="LogCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogDep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogFlt" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogForDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogLegCd" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="LegLogChanges" nillable="true" type="tns:LegLogChanges"/>
+      <xs:complexType name="ArrayOfLegLogDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="LegLogDetails" nillable="true" type="tns:LegLogDetails"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfLegLogDetails" nillable="true" type="tns:ArrayOfLegLogDetails"/>
+      <xs:complexType name="LegLogDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LogChangedBy" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogDayTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogDescription" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogOnDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LogOnTime" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="LegLogDetails" nillable="true" type="tns:LegLogDetails"/>
+      <xs:complexType name="TFlightKey">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Carrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Day" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Dep" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Flt" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LegCd" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TFlightKey" nillable="true" type="tns:TFlightKey"/>
+      <xs:complexType name="ArrayOfTAIMSMtceEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="TAIMSMtceEvent" nillable="true" type="tns:TAIMSMtceEvent"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfTAIMSMtceEvent" nillable="true" type="tns:ArrayOfTAIMSMtceEvent"/>
+      <xs:complexType name="TAIMSMtceEvent">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcReg" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActEndDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActEndTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActStartDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActStartTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Descr" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Memo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MtceBase" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MtceCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ScheEndDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ScheEndTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ScheStartDay" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ScheStartTime" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="WorkPage" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TAIMSMtceEvent" nillable="true" type="tns:TAIMSMtceEvent"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IAIMSWebService_FetchCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCountries"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCountriesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchAirports_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAirports"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchAirports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAirportsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchACType_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchACType"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchACType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchACTypeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchAircraft_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAircraft"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchAircraft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAircraftResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCharterers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCharterers"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCharterers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCharterersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrewMaxFDP_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrewMaxFDP"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrewMaxFDP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrewMaxFDPResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchAircraftRouteDataAndSectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAircraftRouteDataAndSectors"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchAircraftRouteDataAndSectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchAircraftRouteDataAndSectorsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrMembers"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrMembersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchLegMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchLegMembers"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchLegMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchLegMembersResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchLegMembersPerDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchLegMembersPerDay"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchLegMembersPerDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchLegMembersPerDayResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchLegMembersForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchLegMembersForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchLegMembersForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchLegMembersForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetails"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetailsForFlightLegOnDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsForFlightLegOnDay"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetailsForFlightLegOnDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsForFlightLegOnDayResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetailsForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetailsForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetailsX1_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsX1"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightDetailsX1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightDetailsX1Response"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewMemberRosterDetailsForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrewMemberRosterDetailsForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewMemberRosterDetailsForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrewMemberRosterDetailsForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewMisssingTrnIndicatorsForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrewMisssingTrnIndicatorsForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewMisssingTrnIndicatorsForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrewMisssingTrnIndicatorsForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewPendingNotifForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrewPendingNotifForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewPendingNotifForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrewPendingNotifForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrewMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrewMessages"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrewMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrewMessagesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrewQuals_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrewQuals"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FetchCrewQuals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCrewQualsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewCheckIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrewCheckIn"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewCheckIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrewCheckInResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewCheckOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrewCheckOut"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewCheckOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrewCheckOutResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_GetCrewList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrewList"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_GetCrewList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrewListResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewScheduleChangesForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrewScheduleChangesForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_CrewScheduleChangesForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrewScheduleChangesForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UnfinalizedCrewRoutesForDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnfinalizedCrewRoutesForDay"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UnfinalizedCrewRoutesForDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnfinalizedCrewRoutesForDayResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightScheduleModificationLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightScheduleModificationLog"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightScheduleModificationLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightScheduleModificationLogResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_GreenwichMeanTimeDifferenceInMins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GreenwichMeanTimeDifferenceInMins"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_GreenwichMeanTimeDifferenceInMins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GreenwichMeanTimeDifferenceInMinsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_InsertCrewMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCrewMember"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_InsertCrewMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCrewMemberResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_InsertCrewMember2_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCrewMember2"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_InsertCrewMember2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCrewMember2Response"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UpdateLegInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLegInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UpdateLegInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLegInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UpdateVRData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVRData"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UpdateVRData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVRDataResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_RemoveCrewNotificationIndicator_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCrewNotificationIndicator"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_RemoveCrewNotificationIndicator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCrewNotificationIndicatorResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightScheduleChangesForPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightScheduleChangesForPeriod"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_FlightScheduleChangesForPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightScheduleChangesForPeriodResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_ChangeAcRegToRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAcRegToRoute"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_ChangeAcRegToRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAcRegToRouteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UpdateMtceEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMtceEvents"/>
+  </wsdl:message>
+  <wsdl:message name="IAIMSWebService_UpdateMtceEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMtceEventsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IAIMSWebService">
+    <wsdl:operation name="FetchCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCountries" message="tns:IAIMSWebService_FetchCountries_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCountriesResponse" message="tns:IAIMSWebService_FetchCountries_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAirports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchAirports" message="tns:IAIMSWebService_FetchAirports_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchAirportsResponse" message="tns:IAIMSWebService_FetchAirports_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchACType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchACType" message="tns:IAIMSWebService_FetchACType_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchACTypeResponse" message="tns:IAIMSWebService_FetchACType_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAircraft">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchAircraft" message="tns:IAIMSWebService_FetchAircraft_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchAircraftResponse" message="tns:IAIMSWebService_FetchAircraft_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCharterers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCharterers" message="tns:IAIMSWebService_FetchCharterers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCharterersResponse" message="tns:IAIMSWebService_FetchCharterers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrewMaxFDP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrewMaxFDP" message="tns:IAIMSWebService_FetchCrewMaxFDP_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrewMaxFDPResponse" message="tns:IAIMSWebService_FetchCrewMaxFDP_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAircraftRouteDataAndSectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchAircraftRouteDataAndSectors" message="tns:IAIMSWebService_FetchAircraftRouteDataAndSectors_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchAircraftRouteDataAndSectorsResponse" message="tns:IAIMSWebService_FetchAircraftRouteDataAndSectors_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrMembers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrMembers" message="tns:IAIMSWebService_FetchCrMembers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrMembersResponse" message="tns:IAIMSWebService_FetchCrMembers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLegMembers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchLegMembers" message="tns:IAIMSWebService_FetchLegMembers_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchLegMembersResponse" message="tns:IAIMSWebService_FetchLegMembers_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLegMembersPerDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchLegMembersPerDay" message="tns:IAIMSWebService_FetchLegMembersPerDay_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchLegMembersPerDayResponse" message="tns:IAIMSWebService_FetchLegMembersPerDay_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLegMembersForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchLegMembersForPeriod" message="tns:IAIMSWebService_FetchLegMembersForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchLegMembersForPeriodResponse" message="tns:IAIMSWebService_FetchLegMembersForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetails" message="tns:IAIMSWebService_FlightDetails_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsResponse" message="tns:IAIMSWebService_FlightDetails_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetailsForFlightLegOnDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsForFlightLegOnDay" message="tns:IAIMSWebService_FlightDetailsForFlightLegOnDay_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsForFlightLegOnDayResponse" message="tns:IAIMSWebService_FlightDetailsForFlightLegOnDay_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetailsForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsForPeriod" message="tns:IAIMSWebService_FlightDetailsForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsForPeriodResponse" message="tns:IAIMSWebService_FlightDetailsForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetailsX1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsX1" message="tns:IAIMSWebService_FlightDetailsX1_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FlightDetailsX1Response" message="tns:IAIMSWebService_FlightDetailsX1_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CrewMemberRosterDetailsForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/CrewMemberRosterDetailsForPeriod" message="tns:IAIMSWebService_CrewMemberRosterDetailsForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/CrewMemberRosterDetailsForPeriodResponse" message="tns:IAIMSWebService_CrewMemberRosterDetailsForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CrewMisssingTrnIndicatorsForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/CrewMisssingTrnIndicatorsForPeriod" message="tns:IAIMSWebService_CrewMisssingTrnIndicatorsForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/CrewMisssingTrnIndicatorsForPeriodResponse" message="tns:IAIMSWebService_CrewMisssingTrnIndicatorsForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CrewPendingNotifForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/CrewPendingNotifForPeriod" message="tns:IAIMSWebService_CrewPendingNotifForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/CrewPendingNotifForPeriodResponse" message="tns:IAIMSWebService_CrewPendingNotifForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrewMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrewMessages" message="tns:IAIMSWebService_FetchCrewMessages_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrewMessagesResponse" message="tns:IAIMSWebService_FetchCrewMessages_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrewQuals">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrewQuals" message="tns:IAIMSWebService_FetchCrewQuals_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FetchCrewQualsResponse" message="tns:IAIMSWebService_FetchCrewQuals_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CrewCheckIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/CrewCheckIn" message="tns:IAIMSWebService_CrewCheckIn_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/CrewCheckInResponse" message="tns:IAIMSWebService_CrewCheckIn_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CrewCheckOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/CrewCheckOut" message="tns:IAIMSWebService_CrewCheckOut_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/CrewCheckOutResponse" message="tns:IAIMSWebService_CrewCheckOut_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrewList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/GetCrewList" message="tns:IAIMSWebService_GetCrewList_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/GetCrewListResponse" message="tns:IAIMSWebService_GetCrewList_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CrewScheduleChangesForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/CrewScheduleChangesForPeriod" message="tns:IAIMSWebService_CrewScheduleChangesForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/CrewScheduleChangesForPeriodResponse" message="tns:IAIMSWebService_CrewScheduleChangesForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UnfinalizedCrewRoutesForDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/UnfinalizedCrewRoutesForDay" message="tns:IAIMSWebService_UnfinalizedCrewRoutesForDay_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/UnfinalizedCrewRoutesForDayResponse" message="tns:IAIMSWebService_UnfinalizedCrewRoutesForDay_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FlightScheduleModificationLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FlightScheduleModificationLog" message="tns:IAIMSWebService_FlightScheduleModificationLog_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FlightScheduleModificationLogResponse" message="tns:IAIMSWebService_FlightScheduleModificationLog_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GreenwichMeanTimeDifferenceInMins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/GreenwichMeanTimeDifferenceInMins" message="tns:IAIMSWebService_GreenwichMeanTimeDifferenceInMins_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/GreenwichMeanTimeDifferenceInMinsResponse" message="tns:IAIMSWebService_GreenwichMeanTimeDifferenceInMins_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCrewMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/InsertCrewMember" message="tns:IAIMSWebService_InsertCrewMember_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/InsertCrewMemberResponse" message="tns:IAIMSWebService_InsertCrewMember_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCrewMember2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/InsertCrewMember2" message="tns:IAIMSWebService_InsertCrewMember2_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/InsertCrewMember2Response" message="tns:IAIMSWebService_InsertCrewMember2_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLegInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/UpdateLegInfo" message="tns:IAIMSWebService_UpdateLegInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/UpdateLegInfoResponse" message="tns:IAIMSWebService_UpdateLegInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVRData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/UpdateVRData" message="tns:IAIMSWebService_UpdateVRData_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/UpdateVRDataResponse" message="tns:IAIMSWebService_UpdateVRData_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCrewNotificationIndicator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/RemoveCrewNotificationIndicator" message="tns:IAIMSWebService_RemoveCrewNotificationIndicator_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/RemoveCrewNotificationIndicatorResponse" message="tns:IAIMSWebService_RemoveCrewNotificationIndicator_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="FlightScheduleChangesForPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/FlightScheduleChangesForPeriod" message="tns:IAIMSWebService_FlightScheduleChangesForPeriod_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/FlightScheduleChangesForPeriodResponse" message="tns:IAIMSWebService_FlightScheduleChangesForPeriod_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAcRegToRoute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/ChangeAcRegToRoute" message="tns:IAIMSWebService_ChangeAcRegToRoute_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/ChangeAcRegToRouteResponse" message="tns:IAIMSWebService_ChangeAcRegToRoute_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMtceEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAIMSWebService/UpdateMtceEvents" message="tns:IAIMSWebService_UpdateMtceEvents_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IAIMSWebService/UpdateMtceEventsResponse" message="tns:IAIMSWebService_UpdateMtceEvents_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAIMSWebService" type="tns:IAIMSWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="FetchCountries">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchCountries" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAirports">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchAirports" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchACType">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchACType" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAircraft">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchAircraft" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCharterers">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchCharterers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrewMaxFDP">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchCrewMaxFDP" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchAircraftRouteDataAndSectors">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchAircraftRouteDataAndSectors" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrMembers">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchCrMembers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLegMembers">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchLegMembers" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLegMembersPerDay">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchLegMembersPerDay" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchLegMembersForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchLegMembersForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetails">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FlightDetails" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetailsForFlightLegOnDay">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FlightDetailsForFlightLegOnDay" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetailsForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FlightDetailsForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightDetailsX1">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FlightDetailsX1" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrewMemberRosterDetailsForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/CrewMemberRosterDetailsForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrewMisssingTrnIndicatorsForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/CrewMisssingTrnIndicatorsForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrewPendingNotifForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/CrewPendingNotifForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrewMessages">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchCrewMessages" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCrewQuals">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FetchCrewQuals" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrewCheckIn">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/CrewCheckIn" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrewCheckOut">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/CrewCheckOut" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrewList">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/GetCrewList" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrewScheduleChangesForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/CrewScheduleChangesForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnfinalizedCrewRoutesForDay">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/UnfinalizedCrewRoutesForDay" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightScheduleModificationLog">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FlightScheduleModificationLog" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GreenwichMeanTimeDifferenceInMins">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/GreenwichMeanTimeDifferenceInMins" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCrewMember">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/InsertCrewMember" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCrewMember2">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/InsertCrewMember2" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLegInfo">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/UpdateLegInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVRData">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/UpdateVRData" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCrewNotificationIndicator">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/RemoveCrewNotificationIndicator" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightScheduleChangesForPeriod">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/FlightScheduleChangesForPeriod" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAcRegToRoute">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/ChangeAcRegToRoute" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMtceEvents">
+      <soap:operation soapAction="http://tempuri.org/IAIMSWebService/UpdateMtceEvents" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="api_x002F_soap_x002F_aimswebservice">
+    <wsdl:port name="BasicHttpBinding_IAIMSWebService" binding="tns:BasicHttpBinding_IAIMSWebService">
+      <soap:address location="http://10.7.4.20:8020/api/soap/aimswebservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl</con:endpoint></con:endpoints><con:operation id="37ea3dcf-d787-4a2a-85d8-4e82cb08373b" isOneWay="false" action="http://tempuri.org/IAIMSWebService/ChangeAcRegToRoute" name="ChangeAcRegToRoute" bindingOperationName="ChangeAcRegToRoute" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="71b880c8-f523-4fb4-b744-52a4fe7d2c10" isOneWay="false" action="http://tempuri.org/IAIMSWebService/CrewCheckIn" name="CrewCheckIn" bindingOperationName="CrewCheckIn" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="4a229231-cee3-4f1e-8637-790db1970ff0" isOneWay="false" action="http://tempuri.org/IAIMSWebService/CrewCheckOut" name="CrewCheckOut" bindingOperationName="CrewCheckOut" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="26083d9b-00cd-4a00-889e-ec2fdfbedb97" isOneWay="false" action="http://tempuri.org/IAIMSWebService/CrewMemberRosterDetailsForPeriod" name="CrewMemberRosterDetailsForPeriod" bindingOperationName="CrewMemberRosterDetailsForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="e41b6299-0fbe-4950-858c-d1df6a487544" isOneWay="false" action="http://tempuri.org/IAIMSWebService/CrewMisssingTrnIndicatorsForPeriod" name="CrewMisssingTrnIndicatorsForPeriod" bindingOperationName="CrewMisssingTrnIndicatorsForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="392484f3-26bf-4c55-ab73-d07a3a6fc091" isOneWay="false" action="http://tempuri.org/IAIMSWebService/CrewPendingNotifForPeriod" name="CrewPendingNotifForPeriod" bindingOperationName="CrewPendingNotifForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="34a79ee0-8eaf-44a8-a0f8-9a1c32fcf344" isOneWay="false" action="http://tempuri.org/IAIMSWebService/CrewScheduleChangesForPeriod" name="CrewScheduleChangesForPeriod" bindingOperationName="CrewScheduleChangesForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="c756cb8c-cf94-46d3-80f6-7ff30f531fc6" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchACType" name="FetchACType" bindingOperationName="FetchACType" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="394d82e9-c0cb-4a00-8c45-8b32d8b09b0e" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchAircraft" name="FetchAircraft" bindingOperationName="FetchAircraft" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="52d6059c-601f-47bc-98c3-0b7b05ae71e5" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchAircraftRouteDataAndSectors" name="FetchAircraftRouteDataAndSectors" bindingOperationName="FetchAircraftRouteDataAndSectors" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="8f78b79e-2360-4c78-8656-71016c8e1c72" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchAirports" name="FetchAirports" bindingOperationName="FetchAirports" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="358422f1-4e6b-4e21-bcef-0194f262c17a" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchCharterers" name="FetchCharterers" bindingOperationName="FetchCharterers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="8706248b-a953-4d77-aacf-f81932304186" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchCountries" name="FetchCountries" bindingOperationName="FetchCountries" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="e5a5589a-5bb3-4ae1-af54-4161a09bb3ce" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchCrewMaxFDP" name="FetchCrewMaxFDP" bindingOperationName="FetchCrewMaxFDP" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="3d09c91f-7712-4c09-a635-5200fdb65f61" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchCrewMessages" name="FetchCrewMessages" bindingOperationName="FetchCrewMessages" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="613ef30f-23da-4c54-a71d-0501a1f1ac17" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchCrewQuals" name="FetchCrewQuals" bindingOperationName="FetchCrewQuals" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="281a89a7-271a-47b9-8777-6d53850fd474" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchCrMembers" name="FetchCrMembers" bindingOperationName="FetchCrMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="cc5569b5-431d-4c19-ab51-d1bdb73a0572" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchLegMembers" name="FetchLegMembers" bindingOperationName="FetchLegMembers" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eb4e7756-7b7c-4bdd-bf73-2b60ee55b7f6" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:FetchLegMembers>\r
+         <!--Optional:-->\r
+         <tem:UN></tem:UN>\r
+         <!--Optional:-->\r
+         <tem:PSW></tem:PSW>\r
+         <!--Optional:-->\r
+         <tem:DD>13</tem:DD>\r
+         <!--Optional:-->\r
+         <tem:MM>07</tem:MM>\r
+         <!--Optional:-->\r
+         <tem:YY>2025</tem:YY>\r
+         <!--Optional:-->\r
+         <tem:Flight>875</tem:Flight>\r
+         <!--Optional:-->\r
+         <tem:DEP>AYT</tem:DEP>\r
+      </tem:FetchLegMembers>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAIMSWebService/FetchLegMembers"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c678627b-3d9e-4141-b3ea-46f570754706" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchLegMembersForPeriod" name="FetchLegMembersForPeriod" bindingOperationName="FetchLegMembersForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4c03b1c4-df33-47e6-9217-0736b08d735d" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:FetchLegMembersForPeriod>\r
+         <!--Optional:-->\r
+         <tem:UN></tem:UN>\r
+         <!--Optional:-->\r
+         <tem:PSW></tem:PSW>\r
+         <!--Optional:-->\r
+         <tem:DD>13</tem:DD>\r
+         <!--Optional:-->\r
+         <tem:MM>07</tem:MM>\r
+         <!--Optional:-->\r
+         <tem:YY>2025</tem:YY>\r
+         <!--Optional:-->\r
+         <tem:FromHHrs>00</tem:FromHHrs>\r
+         <!--Optional:-->\r
+         <tem:FromMMin>00</tem:FromMMin>\r
+         <!--Optional:-->\r
+         <tem:ToHHrs>23</tem:ToHHrs>\r
+         <!--Optional:-->\r
+         <tem:ToMMin>59</tem:ToMMin>\r
+      </tem:FetchLegMembersForPeriod>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAIMSWebService/FetchLegMembersForPeriod"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="17969419-7971-40c2-8bd7-059b5dfa81c3" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FetchLegMembersPerDay" name="FetchLegMembersPerDay" bindingOperationName="FetchLegMembersPerDay" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="5ca54dc9-a4e6-44f5-b26a-d15a3b15bfc6" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FlightDetails" name="FlightDetails" bindingOperationName="FlightDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="e23bcf64-3be2-4857-ac3b-bfcb67c183cd" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FlightDetailsForFlightLegOnDay" name="FlightDetailsForFlightLegOnDay" bindingOperationName="FlightDetailsForFlightLegOnDay" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="1746a7f9-86f2-47af-9370-f2e888430d14" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FlightDetailsForPeriod" name="FlightDetailsForPeriod" bindingOperationName="FlightDetailsForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eb6279da-a041-468e-914c-27017a9d0a00" name="Request 1" outgoingWss="" incomingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:FlightDetailsForPeriod>\r
+         <!--Optional:-->\r
+         <tem:UN></tem:UN>\r
+         <!--Optional:-->\r
+         <tem:PSW></tem:PSW>\r
+         <!--Optional:-->\r
+         <tem:FromDD>10</tem:FromDD>\r
+         <!--Optional:-->\r
+         <tem:FromMMonth>07</tem:FromMMonth>\r
+         <!--Optional:-->\r
+         <tem:FromYYYY>2025</tem:FromYYYY>\r
+         <!--Optional:-->\r
+         <tem:FromHH>00</tem:FromHH>\r
+         <!--Optional:-->\r
+         <tem:FromMMin>00</tem:FromMMin>\r
+         <!--Optional:-->\r
+         <tem:ToDD>13</tem:ToDD>\r
+         <!--Optional:-->\r
+         <tem:ToMMonth>07</tem:ToMMonth>\r
+         <!--Optional:-->\r
+         <tem:ToYYYY>2025</tem:ToYYYY>\r
+         <!--Optional:-->\r
+         <tem:ToHH>23</tem:ToHH>\r
+         <!--Optional:-->\r
+         <tem:ToMMin>59</tem:ToMMin>\r
+      </tem:FlightDetailsForPeriod>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IAIMSWebService/FlightDetailsForPeriod"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="cb3de198-6fca-4e24-8d8a-446f310bd77b" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FlightDetailsX1" name="FlightDetailsX1" bindingOperationName="FlightDetailsX1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="6f3fe238-6013-49fe-b881-f89aa71e1ba7" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FlightScheduleChangesForPeriod" name="FlightScheduleChangesForPeriod" bindingOperationName="FlightScheduleChangesForPeriod" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="4c310005-7ec1-4847-98fa-95efec25105e" isOneWay="false" action="http://tempuri.org/IAIMSWebService/FlightScheduleModificationLog" name="FlightScheduleModificationLog" bindingOperationName="FlightScheduleModificationLog" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="55c49691-a248-48d7-b6b2-0dc289ae28a6" isOneWay="false" action="http://tempuri.org/IAIMSWebService/GetCrewList" name="GetCrewList" bindingOperationName="GetCrewList" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="9d2d6ed9-f546-430f-9ada-a842aa4291a0" isOneWay="false" action="http://tempuri.org/IAIMSWebService/GreenwichMeanTimeDifferenceInMins" name="GreenwichMeanTimeDifferenceInMins" bindingOperationName="GreenwichMeanTimeDifferenceInMins" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="94a80212-6990-4422-9ffd-56636a3f43e2" isOneWay="false" action="http://tempuri.org/IAIMSWebService/InsertCrewMember" name="InsertCrewMember" bindingOperationName="InsertCrewMember" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="f104cf59-cd16-4275-8689-1541a6328bbf" isOneWay="false" action="http://tempuri.org/IAIMSWebService/InsertCrewMember2" name="InsertCrewMember2" bindingOperationName="InsertCrewMember2" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="acf382ea-23f4-4ae1-a96e-93da8fa4d874" isOneWay="false" action="http://tempuri.org/IAIMSWebService/RemoveCrewNotificationIndicator" name="RemoveCrewNotificationIndicator" bindingOperationName="RemoveCrewNotificationIndicator" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="dc67262a-df1e-45b9-9829-21dede4e05a8" isOneWay="false" action="http://tempuri.org/IAIMSWebService/UnfinalizedCrewRoutesForDay" name="UnfinalizedCrewRoutesForDay" bindingOperationName="UnfinalizedCrewRoutesForDay" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="4bd35c14-400c-4a82-82fd-b301cde56ccc" isOneWay="false" action="http://tempuri.org/IAIMSWebService/UpdateLegInfo" name="UpdateLegInfo" bindingOperationName="UpdateLegInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="4d13ccda-ec35-4140-8c95-9a9ef7fd0c0f" isOneWay="false" action="http://tempuri.org/IAIMSWebService/UpdateMtceEvents" name="UpdateMtceEvents" bindingOperationName="UpdateMtceEvents" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation><con:operation id="2a4e5340-4d9d-44b9-9133-a0c63313baaa" isOneWay="false" action="http://tempuri.org/IAIMSWebService/UpdateVRData" name="UpdateVRData" bindingOperationName="UpdateVRData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

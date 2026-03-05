@@ -1,0 +1,12 @@
+EndPoint	: https://dcsapi-ajet.crane.aero/craneIntegration/CraneDcsIntegrationService
+User		: ROMSIS_USER
+Password	: Ajet@2024ROMSIS
+
+
+UAT Ortamı İçin
+EndPoint	: https://tkj-stage.crane.aero/craneIntegration/CraneDcsIntegrationService
+User		: ROMSIS_USER
+Password	: jL1*3_dM-p2wQ76/hL
+
+
+<entryDate>2024-06-03T16:47:28+03:00</entryDate>’

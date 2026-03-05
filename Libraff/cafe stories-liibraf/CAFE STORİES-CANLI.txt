@@ -1,0 +1,13 @@
+STATÝC ÝP : 37.26.63.201: 7770
+KULLANICI ÝSMÝ = ROMSIS
+ÞÝFRE : rms2019+-
+serverda 2 sql var2012  ve 2008 
+
+stories db sql 2008 üzerinde kurulu
+
+
+sql user=sa
+
+þifre =Sentez123.
+
+data kullanýlan aktif data.

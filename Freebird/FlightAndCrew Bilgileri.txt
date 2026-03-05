@@ -1,0 +1,62 @@
+Get scheduled flight list within the specified date range
+ 
+Get parameters:
+from: required, date format = Y-m-d
+to: required, date format = Y-m-d
+ 
+Shell
+curl --location 'https://api-iq.gohub.aero/api/v1/flight/romsis?from=2025-11-11&to=2025-11-12' \
+--header 'Accept: application/json' \
+--header 'AuthKey: Vl7q8LKPca1qfnmHUYwhnDu0OclO6Xii'
+ 
+Get a specified flight info:
+ 
+Endpoint: api/v1/flight/romsis/{flightId}
+flightId: ID of flight which is came from flight list
+ 
+ 
+Shell
+curl --location 'https://api-iq.gohub.aero/api/v1/flight/romsis/295538' \
+--header 'Accept: application/json' \
+--header 'AuthKey: Vl7q8LKPca1qfnmHUYwhnDu0OclO6Xii'
+
+
+
+
+// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
+    public class Crew
+    {
+        public string crew_code { get; set; }
+        public string role_code { get; set; }
+        public string full_name { get; set; }
+    }
+
+    public class Datum
+    {
+        public int id { get; set; }
+        public string flight_number { get; set; }
+        public string aircraft_registration_number { get; set; }
+        public string departure_airport { get; set; }
+        public string arrival_airport { get; set; }
+        public DateTime departure_date { get; set; }
+        public DateTime arrival_date { get; set; }
+        public string aircraft_type { get; set; }
+        public string aircraft_user_type { get; set; }
+        public bool is_cancelled { get; set; }
+        public List<Crew> crews { get; set; }
+    }
+
+    public class Root
+    {
+        public int current_page { get; set; }
+        public List<Datum> data { get; set; }
+        public int from { get; set; }
+        public int last_page { get; set; }
+        public object next_page_url { get; set; }
+        public string path { get; set; }
+        public int per_page { get; set; }
+        public object prev_page_url { get; set; }
+        public int to { get; set; }
+        public int total { get; set; }
+    }
+

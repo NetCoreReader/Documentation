@@ -1,0 +1,22 @@
+{
+  "AppToken": "97b7a056881768d5a5eccac57402166b3024b798",
+  "ApiKey": "3affb778135207ce8eab5b3e9c27a8ae73aab0671dc49555680e8058ab3ccab1"
+}
+
+Swagger Demo Linki : https://overpaywsdemo.overtech.com.tr/swagger/index.html
+Swagger Real Linki : https://pavopayws.pavo.com.tr/swagger/index.html
+
+
+///////////////////////ROMSIS///////////////////////
+{
+  "AppToken": "97b7a056881768d5a5eccac57402166b3024b798",
+  "ApiKey": "3ba735654509488d0209a36be9edeb8ac7f88a01777803bf14ca4b3fedddb107"
+}
+
+
+Url		: https://pavopay.pavo.com.tr/login?action=logout
+Kullanıcı Adı	: tansu.citlak@romsis.com.tr
+Şifresi		: Tt.12345
+
+Developer	: https://developer.pavopay.dev/c7483318-dd60-4147-bbb4-f0f36b6ab860/#section/Giris
+Web Service Dökümanı: https://pavopayws.pavopay.dev/6ba50907-d5de-4e54-a3f6-513ef0f16ac5/

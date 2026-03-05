@@ -1,0 +1,34 @@
+Merhaba Abdurrahman Bey,
+
+ 
+
+Toplantıda bahsettiğimiz entegrasyonu üzerine kurmaya planladığımız servislere bağlantı bilgileri aşağıdadır. Şifreyi sadece sizin olduğunuz bir mail üzerinden paylaşıyor olacağım.
+
+ 
+
+Ekstra olarak bahsettiğimiz 3 servis yani uçuş planını çektiğimiz FlightDetailsForPeriod, belirli bir uçuşun içindeki uçucu ekibi çektiğimiz FetchLegMembers ve buna alternatif olarak sunduğumuz belirli zaman aralığındaki uçuşların uçucu ekibini çektiğimiz FetchLegMembersForPeriod fonksiyonlarının request ve response örnekleri not olarak paylaşılmıştır. Bu fonksiyon üzerindeki veri tipleri ve açıklamaları bir Word dosyası içerisinden ulaşılabilmektedir.
+
+ 
+
+Sizin için işi kolaylaştırabileceğini düşündüğüm için SOAP Projesini de ZIP dosyasının içerisinde paylaşıyorum. Bunu import ederekte web servise kolayca ulaşabilirsiniz.
+
+ 
+
+Sadece size belirtmek istediğim nokta bacağın uçucu ekip bilgilerinin içerisinde kokpit ekipleri de bulunmaktadır. <a:pos> </a:pos> elementi CPT ve F/O verisi olanları sisteme işlememeliyiz. Veyahut tersten belirtmek gerekirse <a:pos> </a:pos> elementi sadece PUR,SCC,CC1,CC olanları sisteme işlemeliyiz.
+
+ 
+
+Süreci hızlandırmak attığım dökümanları incelemek veya siz inceledikten sonra mapping’ini yapmak içinde bir toplantı düzenleyebiliriz.
+
+ 
+
+Endpoint:
+
+https://webservices.mga.aero/api/soap/aimswebservice?singlewsdl
+
+ 
+
+username: romsis
+Password: jp_D9^c*
+
+
