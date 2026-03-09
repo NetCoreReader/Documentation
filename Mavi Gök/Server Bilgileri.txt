@@ -17,7 +17,7 @@ PASS: 6238MgRm1408!$**
 ///////////////Mavigök IIS Server
 Url:  LG0900670301.mgaapps.com:33905
 ID: MGA\logo.support
-PASS: Qn1K-58.541zxB3fcEv!
+PASS: jQQ9hIe33b$x08e6UnWiM
 SQL Pass: 652814MgRm@@!!
 
 http://inflight.mga.local/
