@@ -56,7 +56,7 @@ Gmail Şifresi	: SM4551sm
 Gmail Uygulama	: ritu epdw lhtf ocyu
 
 Ofis Vpn Bilgileri
-Url Bilgisi	: https://85.100.126.229/
+Url Bilgisi	: https://81.214.125.74/
 Kullanıcı Adı	: abdurrahman.elikara
 Şifre		: 768WNFkpwG!
 Ofis Ping ip	: 172.20.20.1
