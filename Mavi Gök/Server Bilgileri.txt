@@ -6,14 +6,6 @@ DOMAIN: MGA
 ID: logo.support
 PASS: Mgs5520***
 
-
-///////////////Mavigök Logo Server
-Logo  212.252.68.169:33899
-DOMAIN: MGA
-ID: logo.support
-PASS: 6238MgRm1408!$**
-
-
 ///////////////Mavigök IIS Server
 Url:  LG0900670301.mgaapps.com:33905
 ID: MGA\logo.support
